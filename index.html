@@ -3,599 +3,244 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HOSSAM.ABOUHALI — Portfolio BTS SIO SISR</title>
+<title>H.ABOUHALI — Portfolio BTS SIO SISR</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-
 :root {
-  --blue: #2563eb;
-  --blue-light: #3b82f6;
-  --blue-dark: #1d4ed8;
-  --text-dark: #0f172a;
-  --text-mid: #1e3a8a;
-  --text-muted: #64748b;
-  --white: #ffffff;
-  --glass: rgba(255,255,255,0.55);
-  --glass-border: rgba(255,255,255,0.7);
+  --blue: #2563eb; --blue-light: #3b82f6; --blue-dark: #1d4ed8;
+  --text-dark: #0f172a; --text-muted: #64748b;
+  --glass: rgba(255,255,255,0.55); --glass-border: rgba(255,255,255,0.7);
   --shadow: rgba(37,99,235,0.12);
 }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #dbeafe;
-  color: var(--text-dark);
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-/* ── BACKGROUND GRADIENT ── */
+body { font-family: 'Inter', sans-serif; background: #dbeafe; color: var(--text-dark); overflow-x: hidden; min-height: 100vh; }
 .bg-gradient {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
+  position: fixed; inset: 0; z-index: 0;
   background:
     radial-gradient(ellipse 80% 60% at 80% 20%, rgba(147,197,253,0.8) 0%, transparent 60%),
     radial-gradient(ellipse 60% 50% at 20% 80%, rgba(191,219,254,0.6) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 60% 60%, rgba(255,255,255,0.5) 0%, transparent 50%),
     linear-gradient(135deg, #bfdbfe 0%, #dbeafe 40%, #eff6ff 70%, #dbeafe 100%);
 }
-
-/* Orbes lumineuses */
-.orb {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(60px);
-  pointer-events: none;
-  z-index: 0;
-}
+.orb { position: fixed; border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 0; }
 .orb1 { width: 500px; height: 500px; top: -100px; right: -50px; background: rgba(255,255,255,0.6); }
 .orb2 { width: 350px; height: 350px; bottom: 10%; left: -80px; background: rgba(147,197,253,0.4); }
-.orb3 { width: 250px; height: 250px; top: 40%; right: 20%; background: rgba(255,255,255,0.5); }
 
-/* ── NAV ── */
+/* NAV */
 nav {
-  position: fixed;
-  top: 1.2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  width: calc(100% - 3rem);
-  max-width: 1000px;
-  background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
+  position: fixed; top: 1.2rem; left: 50%; transform: translateX(-50%);
+  z-index: 100; width: calc(100% - 3rem); max-width: 1100px;
+  background: var(--glass); backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border); border-radius: 16px;
   padding: 0.85rem 1.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between;
   box-shadow: 0 4px 24px var(--shadow);
 }
-
-.nav-logo {
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--blue);
-  letter-spacing: -0.01em;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  list-style: none;
-}
+.nav-logo { font-weight: 700; font-size: 16px; color: var(--blue); }
+.nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
 .nav-links a {
-  font-size: 13.5px;
-  font-weight: 500;
-  color: var(--text-dark);
-  text-decoration: none;
-  padding: 6px 14px;
-  border-radius: 8px;
-  transition: all 0.2s;
+  font-size: 12.5px; font-weight: 500; color: var(--text-dark);
+  text-decoration: none; padding: 6px 11px; border-radius: 8px; transition: all 0.2s;
 }
-.nav-links a:hover, .nav-links a.active {
-  color: var(--blue);
-  background: rgba(37,99,235,0.08);
-}
-.nav-links a.active {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.nav-right { display: flex; align-items: center; gap: 10px; }
+.nav-links a:hover, .nav-links a.current { color: var(--blue); background: rgba(37,99,235,0.08); }
+.nav-links a.current { text-decoration: underline; text-underline-offset: 3px; }
+.nav-right { display: flex; align-items: center; gap: 8px; }
 .btn-linkedin {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--blue);
-  background: rgba(37,99,235,0.1);
-  border: 1px solid rgba(37,99,235,0.2);
-  border-radius: 8px;
-  padding: 6px 16px;
-  text-decoration: none;
-  transition: all 0.2s;
+  font-size: 12px; font-weight: 500; color: var(--blue);
+  background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2);
+  border-radius: 8px; padding: 6px 14px; text-decoration: none; transition: all 0.2s;
 }
 .btn-linkedin:hover { background: var(--blue); color: white; }
-
 .btn-theme {
-  width: 34px; height: 34px;
-  border-radius: 8px;
-  background: rgba(37,99,235,0.08);
-  border: 1px solid rgba(37,99,235,0.15);
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  font-size: 15px;
-  color: var(--blue);
-  transition: all 0.2s;
-}
-.btn-theme:hover { background: rgba(37,99,235,0.15); }
-
-/* ── WRAPPER ── */
-.wrapper {
-  position: relative;
-  z-index: 1;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  width: 34px; height: 34px; border-radius: 8px; background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.15); display: flex; align-items: center;
+  justify-content: center; cursor: pointer; font-size: 15px; color: var(--blue); transition: all 0.2s;
 }
 
-/* ── SECTIONS ── */
-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 7rem 0 4rem;
-}
+/* WRAPPER */
+.wrapper { position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
 
-/* ── HERO ── */
-#accueil .wrapper { width: 100%; }
+/* PAGE */
+.page { display: none; }
+.page.active { display: block; }
+section { min-height: 100vh; display: flex; align-items: center; padding: 7rem 0 4rem; }
 
-.hero-content { max-width: 600px; }
-
-.hero-tag {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--blue);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.hero-name {
-  font-size: clamp(44px, 7vw, 72px);
-  font-weight: 800;
-  color: var(--text-dark);
-  letter-spacing: -0.03em;
-  line-height: 1;
-  margin-bottom: 0.6rem;
-}
-
-.hero-role {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--blue);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.hero-welcome {
-  font-size: 15px;
-  color: var(--text-muted);
-  margin-bottom: 2.5rem;
-  line-height: 1.6;
-  max-width: 440px;
-}
-
-.hero-btns { display: flex; flex-wrap: wrap; gap: 10px; }
-
-.btn {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 11px 22px;
-  border-radius: 12px;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  transition: all 0.25s;
-  display: inline-flex; align-items: center; gap: 6px;
-}
-.btn-outline {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  color: var(--text-dark);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 12px var(--shadow);
-}
-.btn-outline:hover { background: rgba(255,255,255,0.8); transform: translateY(-1px); }
-.btn-primary {
-  background: var(--blue);
-  color: white;
-  box-shadow: 0 4px 16px rgba(37,99,235,0.35);
-}
-.btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,99,235,0.4); }
-
-.scroll-arrow {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--blue);
-  font-size: 22px;
-  animation: bounce 2s infinite;
-  z-index: 1;
-  cursor: pointer;
-  text-decoration: none;
-}
-@keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
-
-/* ── SECTION TITLE ── */
+/* SECTION TITLE */
 .section-header { margin-bottom: 2.5rem; }
-.section-title {
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--text-dark);
-  letter-spacing: -0.02em;
-  margin-bottom: 0.4rem;
-}
+.title-line { display: inline-block; width: 40px; height: 3px; background: var(--blue); border-radius: 2px; margin-bottom: 0.8rem; }
+.section-title { font-size: 36px; font-weight: 800; color: var(--text-dark); letter-spacing: -0.02em; margin-bottom: 0.4rem; }
 .section-sub { font-size: 14px; color: var(--text-muted); }
-.title-line {
-  display: inline-block;
-  width: 40px; height: 3px;
-  background: var(--blue);
-  border-radius: 2px;
-  margin-bottom: 0.8rem;
-}
 
-/* ── GLASS CARD ── */
+/* GLASS CARD */
 .glass-card {
-  background: var(--glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px var(--shadow);
-  padding: 2rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: var(--glass); backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border); border-radius: 20px;
+  box-shadow: 0 8px 32px var(--shadow); padding: 2rem; transition: transform 0.2s, box-shadow 0.2s;
 }
 .glass-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px var(--shadow); }
 
-/* ── A PROPOS ── */
-#apropos section { min-height: auto; }
-.apropos-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  align-items: start;
-}
-.apropos-text {
-  font-size: 15px;
-  color: var(--text-muted);
-  line-height: 1.8;
-  margin-bottom: 1.2rem;
-}
-.info-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(37,99,235,0.08);
-  font-size: 13.5px;
-}
+/* HERO */
+.hero-tag { font-size: 13px; font-weight: 600; color: var(--blue); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
+.hero-name { font-size: clamp(44px,7vw,72px); font-weight: 800; color: var(--text-dark); letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.6rem; }
+.hero-role { font-size: 16px; font-weight: 600; color: var(--blue); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem; }
+.hero-welcome { font-size: 15px; color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.6; max-width: 440px; }
+.hero-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { font-size: 14px; font-weight: 500; padding: 11px 22px; border-radius: 12px; text-decoration: none; cursor: pointer; border: none; transition: all 0.25s; display: inline-flex; align-items: center; gap: 6px; font-family: 'Inter',sans-serif; }
+.btn-outline { background: var(--glass); border: 1px solid var(--glass-border); color: var(--text-dark); backdrop-filter: blur(10px); box-shadow: 0 2px 12px var(--shadow); }
+.btn-outline:hover { background: rgba(255,255,255,0.8); transform: translateY(-1px); }
+.btn-primary { background: var(--blue); color: white; box-shadow: 0 4px 16px rgba(37,99,235,0.35); }
+.btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+
+/* INFO ROWS */
+.info-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid rgba(37,99,235,0.08); font-size: 13.5px; }
 .info-row:last-child { border-bottom: none; }
 .info-label { font-weight: 600; color: var(--text-dark); min-width: 90px; }
 .info-val { color: var(--text-muted); }
 
-/* ── SKILLS ── */
-#competences section { min-height: auto; }
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-.skill-card {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 4px 20px var(--shadow);
-  transition: all 0.25s;
-}
+/* SKILLS */
+.skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.skill-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); box-shadow: 0 4px 20px var(--shadow); transition: all 0.25s; }
 .skill-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.7); }
-.skill-icon-wrap {
-  width: 44px; height: 44px;
-  border-radius: 12px;
-  background: rgba(37,99,235,0.1);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px;
-  margin-bottom: 0.9rem;
-}
 .skill-card-title { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
 .skill-card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
-.stag {
-  font-size: 11px;
-  font-weight: 500;
-  padding: 2px 8px;
-  border-radius: 6px;
-  background: rgba(37,99,235,0.08);
-  color: var(--blue);
-  border: 1px solid rgba(37,99,235,0.15);
-}
+.stag { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 6px; background: rgba(37,99,235,0.08); color: var(--blue); border: 1px solid rgba(37,99,235,0.15); }
 
-/* ── CERTIFICATIONS ── */
-#certifications section { min-height: auto; }
-.certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.cert-card {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  backdrop-filter: blur(16px);
-  text-align: center;
-  box-shadow: 0 4px 20px var(--shadow);
-  transition: all 0.25s;
-}
+/* PARCOURS */
+.parcours-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.parcours-col-title { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 800; color: var(--text-dark); margin-bottom: 1.8rem; }
+.p-timeline { position: relative; padding-left: 22px; }
+.p-timeline::before { content:''; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, var(--blue), rgba(37,99,235,0.1)); border-radius: 2px; }
+.p-card { position: relative; margin-bottom: 1.2rem; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.3rem 1.4rem; backdrop-filter: blur(16px); box-shadow: 0 4px 20px var(--shadow); transition: all 0.25s; }
+.p-card::before { content:''; position: absolute; left: -21px; top: 18px; width: 12px; height: 12px; border-radius: 50%; background: var(--blue); border: 2px solid white; box-shadow: 0 0 0 3px rgba(37,99,235,0.2); }
+.p-card:hover { transform: translateX(4px); background: rgba(255,255,255,0.75); }
+.p-card-name { font-size: 15px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+.p-card-dates { font-size: 11px; font-weight: 600; color: var(--text-dark); }
+.p-card-org { font-size: 11.5px; color: var(--text-muted); }
+.p-card-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; margin: 0.5rem 0 0.8rem; }
+.btn-savoir { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--blue); background: rgba(37,99,235,0.07); border: 1px solid rgba(37,99,235,0.2); padding: 5px 13px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-family: 'Inter',sans-serif; }
+.btn-savoir:hover { background: var(--blue); color: white; }
+
+/* CERTS */
+.certs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.cert-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); text-align: center; box-shadow: 0 4px 20px var(--shadow); transition: all 0.25s; }
 .cert-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.75); }
-.cert-badge {
-  width: 52px; height: 52px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px;
-  margin: 0 auto 0.9rem;
-}
+.cert-badge { width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, var(--blue-light), var(--blue-dark)); display: flex; align-items: center; justify-content: center; font-size: 22px; margin: 0 auto 0.9rem; font-weight: 800; color: white; }
 .cert-name { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.3rem; }
 .cert-org { font-size: 12px; color: var(--text-muted); }
 
-/* ── PARCOURS ── */
-#parcours section { min-height: auto; }
-.timeline { display: flex; flex-direction: column; gap: 0; }
-.tl-item {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 0;
-  position: relative;
-}
-.tl-left {
-  padding: 0 2rem 2.5rem 0;
-  text-align: right;
-  border-right: 2px solid rgba(37,99,235,0.15);
-  position: relative;
-}
-.tl-left::after {
-  content: '';
-  position: absolute;
-  right: -7px; top: 6px;
-  width: 12px; height: 12px;
-  border-radius: 50%;
-  background: var(--blue);
-  border: 2px solid white;
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
-}
-.tl-year { font-size: 12px; font-weight: 700; color: var(--blue); letter-spacing: 0.05em; }
-.tl-type { font-size: 11px; color: var(--text-muted); }
-.tl-right {
-  padding: 0 0 2.5rem 2rem;
-}
-.tl-title { font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.3rem; }
-.tl-org { font-size: 12px; color: var(--blue); font-weight: 500; margin-bottom: 0.6rem; }
-.tl-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
-.tl-desc li { margin-left: 1rem; margin-bottom: 3px; }
-
-/* ── PROJETS ── */
-#projets section { min-height: auto; }
-.projets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.projet-card {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 18px;
-  padding: 1.8rem;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 4px 20px var(--shadow);
-  transition: all 0.25s;
-}
-.projet-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.72); }
-.projet-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; }
-.projet-icon {
-  width: 42px; height: 42px;
-  border-radius: 11px;
-  background: rgba(37,99,235,0.1);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-.projet-title { font-size: 15px; font-weight: 700; color: var(--text-dark); }
-.projet-date { font-size: 11px; color: var(--text-muted); }
-.projet-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
-.projet-tags { display: flex; flex-wrap: wrap; gap: 5px; }
-.ptag {
-  font-size: 11px; font-weight: 500;
-  padding: 3px 9px;
-  border-radius: 6px;
-  background: rgba(37,99,235,0.08);
-  color: var(--blue);
-  border: 1px solid rgba(37,99,235,0.15);
-}
-
-/* ── VEILLE ── */
-#veille section { min-height: auto; }
-.veille-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
-.veille-card {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 4px 20px var(--shadow);
-  transition: all 0.25s;
-}
+/* VEILLE */
+.veille-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); box-shadow: 0 4px 20px var(--shadow); transition: all 0.25s; }
 .veille-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.72); }
-.veille-icon { font-size: 28px; margin-bottom: 0.7rem; }
 .veille-title { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
 .veille-text { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; }
 
-/* ── CONTACT ── */
-#contact section { min-height: auto; }
+/* TABLEAU E5 */
+.e5-table-wrap { overflow-x: auto; border-radius: 16px; box-shadow: 0 8px 32px var(--shadow); }
+.e5-table { width: 100%; border-collapse: collapse; background: rgba(255,255,255,0.7); backdrop-filter: blur(16px); font-size: 12px; }
+.e5-table thead tr { background: var(--blue); color: white; }
+.e5-table th { padding: 10px 8px; text-align: center; font-weight: 600; font-size: 11px; line-height: 1.3; border: 1px solid rgba(255,255,255,0.2); }
+.e5-table th.left { text-align: left; }
+.e5-table td { padding: 9px 10px; border: 1px solid rgba(37,99,235,0.1); vertical-align: middle; color: var(--text-dark); }
+.e5-table td.center { text-align: center; }
+.e5-table tr:hover td { background: rgba(37,99,235,0.04); }
+.e5-section-row td { background: rgba(37,99,235,0.06); font-weight: 700; font-size: 11px; color: var(--blue); letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 10px; }
+.e5-check { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 5px; border: 2px solid rgba(37,99,235,0.3); background: white; }
+.e5-check.checked { background: var(--blue); border-color: var(--blue); color: white; font-size: 11px; }
+.e5-period { font-family: monospace; font-size: 11px; color: var(--blue); white-space: nowrap; }
+.e5-realisation { font-weight: 500; }
+.e5-info { background: rgba(37,99,235,0.05); border: 1px solid rgba(37,99,235,0.15); border-radius: 12px; padding: 1rem 1.2rem; margin-bottom: 1.5rem; font-size: 13px; color: var(--text-muted); }
+.e5-info strong { color: var(--text-dark); }
+
+/* MODAL */
+.modal-overlay { position: fixed; inset: 0; z-index: 500; background: rgba(15,30,60,0.45); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.25s; padding: 2rem; }
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal-box { background: rgba(255,255,255,0.95); backdrop-filter: blur(24px); border: 1px solid var(--glass-border); border-radius: 22px; padding: 2.2rem; max-width: 680px; width: 100%; max-height: 85vh; overflow-y: auto; box-shadow: 0 24px 60px rgba(37,99,235,0.18); transform: translateY(20px); transition: transform 0.3s; }
+.modal-overlay.open .modal-box { transform: translateY(0); }
+.modal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
+.modal-title { font-size: 20px; font-weight: 800; color: var(--text-dark); }
+.modal-subtitle { font-size: 13px; color: var(--blue); font-weight: 600; margin-top: 3px; }
+.modal-close { width: 32px; height: 32px; border-radius: 8px; background: rgba(37,99,235,0.08); border: none; cursor: pointer; font-size: 16px; color: var(--text-muted); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+.modal-close:hover { background: rgba(37,99,235,0.18); }
+
+/* SEMAINES */
+.semaines-list { display: flex; flex-direction: column; gap: 10px; }
+.semaine-item { border: 1px solid rgba(37,99,235,0.15); border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.6); transition: box-shadow 0.2s; }
+.semaine-item:hover { box-shadow: 0 4px 16px rgba(37,99,235,0.12); }
+.semaine-header { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1.2rem; cursor: pointer; user-select: none; }
+.semaine-header:hover { background: rgba(37,99,235,0.04); }
+.semaine-num { display: flex; align-items: center; gap: 10px; }
+.s-badge { width: 28px; height: 28px; border-radius: 8px; background: rgba(37,99,235,0.1); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: var(--blue); }
+.s-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+.s-dates { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+.s-arrow { font-size: 12px; color: var(--text-muted); transition: transform 0.2s; }
+.semaine-item.open .s-arrow { transform: rotate(180deg); }
+.semaine-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; padding: 0 1.2rem; font-size: 13px; color: var(--text-muted); line-height: 1.75; }
+.semaine-item.open .semaine-body { max-height: 1200px; padding: 0.9rem 1.2rem 1rem; border-top: 1px solid rgba(37,99,235,0.1); }
+.semaine-body ul { padding-left: 1.2rem; }
+.semaine-body li { margin-bottom: 4px; }
+.semaine-body strong { color: var(--text-dark); }
+
+/* CONTACT */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
 .contact-info { display: flex; flex-direction: column; gap: 12px; }
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 14px;
-  padding: 1.1rem 1.3rem;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 2px 12px var(--shadow);
-  text-decoration: none;
-  transition: all 0.2s;
-}
+.contact-item { display: flex; align-items: center; gap: 14px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 14px; padding: 1.1rem 1.3rem; backdrop-filter: blur(16px); box-shadow: 0 2px 12px var(--shadow); text-decoration: none; transition: all 0.2s; }
 .contact-item:hover { background: rgba(255,255,255,0.75); transform: translateX(4px); }
-.contact-icon {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  background: rgba(37,99,235,0.1);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
+.contact-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(37,99,235,0.1); display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; color: var(--blue); flex-shrink: 0; }
 .contact-label { font-size: 11px; color: var(--text-muted); font-weight: 500; }
 .contact-val { font-size: 14px; font-weight: 600; color: var(--text-dark); }
-
-.contact-form {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  padding: 2rem;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px var(--shadow);
-}
+.contact-form { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; backdrop-filter: blur(20px); box-shadow: 0 8px 32px var(--shadow); }
 .form-title { font-size: 18px; font-weight: 700; color: var(--text-dark); margin-bottom: 1.3rem; }
 .form-group { margin-bottom: 1rem; }
 .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--text-dark); margin-bottom: 5px; }
-.form-group input, .form-group textarea {
-  width: 100%;
-  background: rgba(255,255,255,0.6);
-  border: 1px solid var(--glass-border);
-  border-radius: 10px;
-  padding: 10px 14px;
-  font-family: 'Inter', sans-serif;
-  font-size: 13.5px;
-  color: var(--text-dark);
-  outline: none;
-  transition: border-color 0.2s, background 0.2s;
-  resize: vertical;
-}
-.form-group input:focus, .form-group textarea:focus {
-  border-color: rgba(37,99,235,0.5);
-  background: rgba(255,255,255,0.85);
-}
+.form-group input, .form-group textarea { width: 100%; background: rgba(255,255,255,0.6); border: 1px solid var(--glass-border); border-radius: 10px; padding: 10px 14px; font-family: 'Inter',sans-serif; font-size: 13.5px; color: var(--text-dark); outline: none; transition: border-color 0.2s; resize: vertical; }
+.form-group input:focus, .form-group textarea:focus { border-color: rgba(37,99,235,0.5); background: rgba(255,255,255,0.85); }
 .form-group textarea { height: 90px; }
-.btn-send {
-  width: 100%;
-  background: var(--blue);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 12px;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 0 4px 16px rgba(37,99,235,0.35);
-}
+.btn-send { width: 100%; background: var(--blue); color: white; border: none; border-radius: 10px; padding: 12px; font-size: 14px; font-weight: 600; font-family: 'Inter',sans-serif; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 16px rgba(37,99,235,0.35); }
 .btn-send:hover { background: var(--blue-dark); transform: translateY(-1px); }
 
-/* ── FOOTER ── */
-footer {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 2rem;
-  border-top: 1px solid rgba(37,99,235,0.1);
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-/* ── REVEAL ANIMATIONS ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 
-/* ── DARK MODE ── */
-body.dark {
-  --glass: rgba(15,23,42,0.6);
-  --glass-border: rgba(255,255,255,0.08);
-  --text-dark: #f1f5f9;
-  --text-mid: #93c5fd;
-  --text-muted: #94a3b8;
-  --shadow: rgba(0,0,0,0.3);
-  background: #0f172a;
-}
-body.dark .bg-gradient {
-  background:
-    radial-gradient(ellipse 80% 60% at 80% 20%, rgba(30,58,138,0.5) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(29,78,216,0.3) 0%, transparent 60%),
-    linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
-}
-body.dark .orb1 { background: rgba(30,58,138,0.3); }
-body.dark .orb2 { background: rgba(29,78,216,0.2); }
-body.dark .stag, body.dark .ptag { background: rgba(59,130,246,0.15); }
+/* DARK MODE */
+body.dark { --glass: rgba(15,23,42,0.6); --glass-border: rgba(255,255,255,0.08); --text-dark: #f1f5f9; --text-muted: #94a3b8; --shadow: rgba(0,0,0,0.3); background: #0f172a; }
+body.dark .bg-gradient { background: radial-gradient(ellipse 80% 60% at 80% 20%, rgba(30,58,138,0.5) 0%, transparent 60%), linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%); }
+body.dark .e5-table { background: rgba(15,23,42,0.8); }
+body.dark .e5-table td { color: #f1f5f9; }
+body.dark .e5-section-row td { background: rgba(37,99,235,0.15); }
+body.dark .e5-check { background: rgba(15,23,42,0.8); }
+body.dark .semaine-item { background: rgba(255,255,255,0.04); }
+body.dark .modal-box { background: rgba(15,23,50,0.97); }
 body.dark .form-group input, body.dark .form-group textarea { background: rgba(255,255,255,0.05); color: #f1f5f9; }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .skills-grid, .certs-grid, .veille-cards { grid-template-columns: 1fr 1fr; }
-  .projets-grid, .apropos-grid, .contact-grid { grid-template-columns: 1fr; }
-  .hero-name { font-size: 40px; }
-}
-
-/* ── PAGES ── */
-.page { display: none; }
-.page.active { display: block; }
-
-/* Active nav highlight */
-nav a[data-page].current {
-  color: var(--blue);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  .skills-grid, .certs-grid { grid-template-columns: 1fr 1fr; }
+  .parcours-cols, .contact-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
-
-<!-- BACKGROUND -->
 <div class="bg-gradient"></div>
 <div class="orb orb1"></div>
 <div class="orb orb2"></div>
-<div class="orb orb3"></div>
 
 <!-- NAV -->
 <nav>
   <span class="nav-logo">H.ABOUHALI</span>
   <ul class="nav-links">
-    <li><a href="#" data-page="accueil" class="current" onclick="showPage('accueil',this)">Accueil</a></li>
-    <li><a href="#" data-page="apropos" onclick="showPage('apropos',this)">À propos</a></li>
-    <li><a href="#" data-page="certifications" onclick="showPage('certifications',this)">Certifications</a></li>
-    <li><a href="#" data-page="parcours" onclick="showPage('parcours',this)">Parcours</a></li>
-    <li><a href="#" data-page="projets" onclick="showPage('projets',this)">Projets</a></li>
-    <li><a href="#" data-page="veille" onclick="showPage('veille',this)">Veille</a></li>
-    <li><a href="#" data-page="contact" onclick="showPage('contact',this)">Contact</a></li>
+    <li><a href="#" data-page="accueil" class="current" onclick="showPage('accueil',this);return false">Profil</a></li>
+    <li><a href="#" data-page="competences" onclick="showPage('competences',this);return false">Competences</a></li>
+    <li><a href="#" data-page="veille" onclick="showPage('veille',this);return false">Veille</a></li>
+    <li><a href="#" data-page="formation" onclick="showPage('formation',this);return false">Formation</a></li>
+    <li><a href="#" data-page="certifications" onclick="showPage('certifications',this);return false">Certifications</a></li>
+    <li><a href="#" data-page="tableau" onclick="showPage('tableau',this);return false">Tableau E5</a></li>
+    <li><a href="#" data-page="stage" onclick="showPage('stage',this);return false">Stage</a></li>
+    <li><a href="#" data-page="contact" onclick="showPage('contact',this);return false">Contact</a></li>
   </ul>
   <div class="nav-right">
     <a href="https://linkedin.com" class="btn-linkedin">LinkedIn</a>
@@ -603,796 +248,485 @@ nav a[data-page].current {
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════
-     PAGE : ACCUEIL
-══════════════════════════════════════════ -->
+<!-- ══ PROFIL ══ -->
 <div id="page-accueil" class="page active">
-  <section style="min-height:100vh;display:flex;align-items:center;padding-top:6rem;position:relative;">
-    <div class="wrapper">
-      <div class="hero-content">
-        <p class="hero-tag reveal">Portfolio BTS SIO · SISR</p>
-        <h1 class="hero-name reveal reveal-delay-1">Hossam ABOUHALI</h1>
-        <p class="hero-role reveal reveal-delay-2">Étudiant en BTS SIO - Option SISR</p>
-        <p class="hero-welcome reveal reveal-delay-3">Bienvenue sur mon Portfolio · Passionné par les réseaux, les systèmes et la cybersécurité. En stage chez 2IT Solutions à Saint-Étienne du 18 mai au 3 juillet 2026.</p>
-        <div class="hero-btns reveal reveal-delay-3">
-          <a href="#" class="btn btn-outline" onclick="showPage('apropos',null)">Découvrir mon profil</a>
-          <a href="#" class="btn btn-outline" onclick="showPage('parcours',null)">Mon parcours</a>
-          <a href="#" class="btn btn-primary" onclick="showPage('contact',null)">Me contacter</a>
-        </div>
-      </div>
-    </div>
-    <a href="#" class="scroll-arrow" onclick="showPage('apropos',null)">⌄</a>
-  </section>
-</div>
-
-<!-- ══════════════════════════════════════════
-     PAGE : À PROPOS
-══════════════════════════════════════════ -->
-<div id="page-apropos" class="page">
-  <section style="min-height:100vh;display:flex;align-items:center;padding-top:7rem;padding-bottom:4rem;">
+  <section style="min-height:100vh;display:flex;align-items:center;padding-top:6rem">
     <div class="wrapper" style="width:100%">
-      <div class="section-header reveal">
-        <div class="title-line"></div>
-        <h2 class="section-title">À propos</h2>
-        <p class="section-sub">Qui suis-je ?</p>
-      </div>
-      <div class="apropos-grid">
-        <div class="glass-card reveal">
-          <p class="apropos-text">
-            Je suis <strong>Hossam Abouhali</strong>, étudiant en première année de BTS Services Informatiques aux Organisations, option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) au Lycée Georges Brassens à Rive-de-Gier.
-          </p>
-          <p class="apropos-text">
-            Motivé et rigoureux, je souhaite développer mes compétences en support, systèmes et réseaux au sein d'une entreprise dynamique. Je suis actuellement en stage chez <strong>2IT Solutions</strong> à Saint-Étienne.
-          </p>
-          <div class="hero-btns" style="margin-top:1.5rem">
-            <a href="#" class="btn btn-primary" onclick="showPage('contact',null)">Me contacter</a>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center">
+        <div>
+          <p class="hero-tag reveal">Portfolio BTS SIO · SISR</p>
+          <h1 class="hero-name reveal reveal-delay-1">Hossam ABOUHALI</h1>
+          <p class="hero-role reveal reveal-delay-2">Etudiant BTS SIO - Option SISR</p>
+          <p class="hero-welcome reveal reveal-delay-3">Passionne par les reseaux, les systemes et la cybersecurite. Actuellement en stage chez 2IT Solutions a Saint-Etienne du 18 mai au 3 juillet 2026.</p>
+          <div class="hero-btns reveal reveal-delay-3">
+            <a href="#" class="btn btn-outline" onclick="showPage('competences',null);return false">Mes competences</a>
+            <a href="#" class="btn btn-primary" onclick="showPage('contact',null);return false">Me contacter</a>
           </div>
         </div>
-        <div class="glass-card reveal reveal-delay-1">
-          <div class="info-row">
-            <span class="info-label">📅 Naissance</span>
-            <span class="info-val">12 juillet 2007</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">📍 Ville</span>
-            <span class="info-val">Saint-Chamond, Loire (42)</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">🎓 Formation</span>
-            <span class="info-val">BTS SIO SISR — 1ère année</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">🏢 Stage</span>
-            <span class="info-val">2IT Solutions, Saint-Étienne</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">📆 Période</span>
-            <span class="info-val">18 mai → 3 juillet 2026</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">🇫🇷 Langues</span>
-            <span class="info-val">FR (natif) · EN (B2) · ES (B1)</span>
-          </div>
-          <div class="info-row">
-            <span class="info-label">📧 Email</span>
-            <span class="info-val">hossam.abouhali@gmail.com</span>
-          </div>
+        <div class="glass-card reveal reveal-delay-2">
+          <div class="info-row"><span class="info-label">Naissance</span><span class="info-val">12 juillet 2007</span></div>
+          <div class="info-row"><span class="info-label">Ville</span><span class="info-val">Saint-Chamond, Loire (42)</span></div>
+          <div class="info-row"><span class="info-label">Formation</span><span class="info-val">BTS SIO SISR — 1ere annee</span></div>
+          <div class="info-row"><span class="info-label">Lycee</span><span class="info-val">Georges Brassens, Rive-de-Gier</span></div>
+          <div class="info-row"><span class="info-label">Stage</span><span class="info-val">2IT Solutions, Saint-Etienne</span></div>
+          <div class="info-row"><span class="info-label">Periode</span><span class="info-val">18 mai au 3 juillet 2026</span></div>
+          <div class="info-row"><span class="info-label">Langues</span><span class="info-val">Francais (natif) · Anglais (B2) · Espagnol (B1)</span></div>
+          <div class="info-row"><span class="info-label">Email</span><span class="info-val">hossam.abouhali@gmail.com</span></div>
         </div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ══════════════════════════════════════════
-     PAGE : CERTIFICATIONS
-══════════════════════════════════════════ -->
-<div id="page-certifications" class="page">
-  <section style="min-height:100vh;display:flex;align-items:center;padding-top:7rem;padding-bottom:4rem;">
+<!-- ══ COMPETENCES ══ -->
+<div id="page-competences" class="page">
+  <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
       <div class="section-header reveal">
         <div class="title-line"></div>
-        <h2 class="section-title">Certifications</h2>
-        <p class="section-sub">Mes compétences certifiées</p>
-      </div>
-      <div class="certs-grid" style="margin-bottom:2.5rem">
-        <div class="cert-card reveal">
-          <div class="cert-badge">🎯</div>
-          <div class="cert-name">Certification PIX</div>
-          <div class="cert-org">GIP PIX · Compétences numériques</div>
-        </div>
-        <div class="cert-card reveal reveal-delay-1">
-          <div class="cert-badge">🔒</div>
-          <div class="cert-name">Certification CNIL</div>
-          <div class="cert-org">CNIL · Protection des données personnelles</div>
-        </div>
-        <div class="cert-card reveal reveal-delay-2">
-          <div class="cert-badge">🛡️</div>
-          <div class="cert-name">SecNumacadémie</div>
-          <div class="cert-org">ANSSI · Cybersécurité</div>
-        </div>
-      </div>
-
-      <div class="section-header reveal" style="margin-top:2rem">
-        <div class="title-line"></div>
-        <h2 class="section-title" style="font-size:26px">Compétences techniques</h2>
+        <h2 class="section-title">Competences</h2>
+        <p class="section-sub">Competences techniques acquises en formation et en stage</p>
       </div>
       <div class="skills-grid reveal">
         <div class="skill-card">
-          <div class="skill-icon-wrap">🌐</div>
-          <div class="skill-card-title">Réseau & Protocoles</div>
-          <div class="skill-card-tags">
-            <span class="stag">TCP/IP</span><span class="stag">DHCP</span><span class="stag">DNS</span><span class="stag">VLAN</span>
-          </div>
+          <div class="skill-card-title">Reseau & Protocoles</div>
+          <div class="skill-card-tags"><span class="stag">TCP/IP</span><span class="stag">DHCP</span><span class="stag">DNS</span><span class="stag">VLAN</span><span class="stag">Routage</span></div>
         </div>
         <div class="skill-card">
-          <div class="skill-icon-wrap">🖥️</div>
           <div class="skill-card-title">Windows Server</div>
-          <div class="skill-card-tags">
-            <span class="stag">Active Directory</span><span class="stag">GPO</span><span class="stag">DNS/DHCP</span>
-          </div>
+          <div class="skill-card-tags"><span class="stag">Active Directory</span><span class="stag">GPO</span><span class="stag">DNS</span><span class="stag">DHCP</span></div>
         </div>
         <div class="skill-card">
-          <div class="skill-icon-wrap">⚙️</div>
           <div class="skill-card-title">Virtualisation</div>
-          <div class="skill-card-tags">
-            <span class="stag">VMware</span><span class="stag">Packet Tracer</span>
-          </div>
+          <div class="skill-card-tags"><span class="stag">VMware</span><span class="stag">VirtualBox</span><span class="stag">Packet Tracer</span></div>
         </div>
         <div class="skill-card">
-          <div class="skill-icon-wrap">🐧</div>
           <div class="skill-card-title">Linux Debian</div>
-          <div class="skill-card-tags">
-            <span class="stag">IPTables</span><span class="stag">Apache2</span><span class="stag">MariaDB</span>
-          </div>
+          <div class="skill-card-tags"><span class="stag">IPTables</span><span class="stag">Apache2</span><span class="stag">MariaDB</span><span class="stag">SSH</span></div>
         </div>
         <div class="skill-card">
-          <div class="skill-icon-wrap">🎫</div>
-          <div class="skill-card-title">Ticketing ITSM</div>
-          <div class="skill-card-tags">
-            <span class="stag">GLPI</span><span class="stag">LDAP</span><span class="stag">Support N1</span>
-          </div>
+          <div class="skill-card-title">Ticketing & ITSM</div>
+          <div class="skill-card-tags"><span class="stag">GLPI</span><span class="stag">LDAP</span><span class="stag">Support N1</span></div>
         </div>
         <div class="skill-card">
-          <div class="skill-icon-wrap">💼</div>
-          <div class="skill-card-title">Bureautique</div>
-          <div class="skill-card-tags">
-            <span class="stag">Microsoft 365</span><span class="stag">Office</span>
-          </div>
+          <div class="skill-card-title">Equipements reels</div>
+          <div class="skill-card-tags"><span class="stag">Cisco C888</span><span class="stag">Netgear</span><span class="stag">PuTTY</span><span class="stag">Yealink</span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Securite</div>
+          <div class="skill-card-tags"><span class="stag">Pare-feu</span><span class="stag">NAT/PAT</span><span class="stag">ROMMON</span><span class="stag">ACL</span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Bureautique & OS</div>
+          <div class="skill-card-tags"><span class="stag">Windows 10/11</span><span class="stag">Microsoft 365</span><span class="stag">Drivers</span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-title">Telephonie IP</div>
+          <div class="skill-card-tags"><span class="stag">Yealink</span><span class="stag">Alcatel</span><span class="stag">VoIP</span><span class="stag">Config web</span></div>
         </div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ══════════════════════════════════════════
-     PAGE : PARCOURS
-══════════════════════════════════════════ -->
-<style>
-/* ── PARCOURS TWO-COL ── */
-.parcours-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-.parcours-col-title {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 18px; font-weight: 800; color: var(--text-dark);
-  margin-bottom: 1.8rem;
-}
-.parcours-col-title .col-icon {
-  width: 38px; height: 38px; border-radius: 10px;
-  background: rgba(37,99,235,0.1);
-  display: flex; align-items: center; justify-content: center; font-size: 18px;
-}
-.p-timeline { position: relative; padding-left: 22px; }
-.p-timeline::before {
-  content: ''; position: absolute; left: 5px; top: 8px; bottom: 8px;
-  width: 2px; background: linear-gradient(to bottom, var(--blue), rgba(37,99,235,0.1));
-  border-radius: 2px;
-}
-.p-card {
-  position: relative; margin-bottom: 1.2rem;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px; padding: 1.3rem 1.4rem;
-  backdrop-filter: blur(16px);
-  box-shadow: 0 4px 20px var(--shadow);
-  transition: all 0.25s;
-}
-.p-card::before {
-  content: ''; position: absolute;
-  left: -21px; top: 18px;
-  width: 12px; height: 12px; border-radius: 50%;
-  background: var(--blue); border: 2px solid white;
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
-}
-.p-card:hover { transform: translateX(4px); background: rgba(255,255,255,0.75); }
-.p-card-top { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0.7rem; }
-.p-card-logo {
-  width: 40px; height: 40px; border-radius: 10px;
-  background: rgba(37,99,235,0.12);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; flex-shrink: 0;
-  border: 1px solid rgba(37,99,235,0.15);
-}
-.p-card-name { font-size: 15px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
-.p-card-dates { font-size: 11px; font-weight: 600; color: var(--text-dark); }
-.p-card-org { font-size: 11.5px; color: var(--text-muted); }
-.p-card-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.8rem; }
-.btn-savoir {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 12px; font-weight: 600; color: var(--blue);
-  background: rgba(37,99,235,0.07);
-  border: 1px solid rgba(37,99,235,0.2);
-  padding: 5px 13px; border-radius: 8px;
-  cursor: pointer; transition: all 0.2s; border: none;
-  font-family: 'Inter', sans-serif;
-}
-.btn-savoir:hover { background: var(--blue); color: white; }
-
-/* ── MODAL ── */
-.modal-overlay {
-  position: fixed; inset: 0; z-index: 500;
-  background: rgba(15,30,60,0.45);
-  backdrop-filter: blur(8px);
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none; transition: opacity 0.25s;
-  padding: 2rem;
-}
-.modal-overlay.open { opacity: 1; pointer-events: all; }
-.modal-box {
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(24px);
-  border: 1px solid var(--glass-border);
-  border-radius: 22px;
-  padding: 2.2rem;
-  max-width: 640px; width: 100%;
-  max-height: 85vh; overflow-y: auto;
-  box-shadow: 0 24px 60px rgba(37,99,235,0.18);
-  transform: translateY(20px); transition: transform 0.3s;
-}
-.modal-overlay.open .modal-box { transform: translateY(0); }
-body.dark .modal-box { background: rgba(15,23,50,0.95); }
-.modal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
-.modal-title { font-size: 20px; font-weight: 800; color: var(--text-dark); letter-spacing: -0.02em; }
-.modal-subtitle { font-size: 13px; color: var(--blue); font-weight: 600; margin-top: 3px; }
-.modal-close {
-  width: 32px; height: 32px; border-radius: 8px;
-  background: rgba(37,99,235,0.08); border: none; cursor: pointer;
-  font-size: 16px; color: var(--text-muted); display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; transition: background 0.2s;
-}
-.modal-close:hover { background: rgba(37,99,235,0.18); }
-
-/* ── SEMAINES ── */
-.semaines-list { display: flex; flex-direction: column; gap: 10px; }
-.semaine-item {
-  border: 1px solid rgba(37,99,235,0.15);
-  border-radius: 14px; overflow: hidden;
-  background: rgba(255,255,255,0.6);
-  transition: box-shadow 0.2s;
-}
-body.dark .semaine-item { background: rgba(255,255,255,0.04); }
-.semaine-item:hover { box-shadow: 0 4px 16px rgba(37,99,235,0.12); }
-.semaine-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0.9rem 1.2rem; cursor: pointer;
-  user-select: none;
-}
-.semaine-header:hover { background: rgba(37,99,235,0.04); }
-.semaine-num {
-  display: flex; align-items: center; gap: 10px;
-}
-.s-badge {
-  width: 28px; height: 28px; border-radius: 8px;
-  background: rgba(37,99,235,0.1);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700; color: var(--blue);
-}
-.s-title { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
-.s-dates { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
-.s-arrow { font-size: 12px; color: var(--text-muted); transition: transform 0.2s; }
-.semaine-item.open .s-arrow { transform: rotate(180deg); }
-.semaine-body {
-  max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s;
-  padding: 0 1.2rem; font-size: 13px; color: var(--text-muted); line-height: 1.75;
-  border-top: 0px solid rgba(37,99,235,0.1);
-}
-.semaine-item.open .semaine-body {
-  max-height: 400px; padding: 0.9rem 1.2rem 1rem;
-  border-top: 1px solid rgba(37,99,235,0.1);
-}
-.semaine-body ul { padding-left: 1.2rem; }
-.semaine-body li { margin-bottom: 4px; }
-
-/* Simple modal for non-stage cards */
-.modal-simple-content { font-size: 13.5px; color: var(--text-muted); line-height: 1.8; }
-.modal-simple-content strong { color: var(--text-dark); }
-</style>
-
-<div id="page-parcours" class="page">
-  <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem;">
-    <div class="wrapper" style="width:100%">
-      <div class="section-header reveal">
-        <div class="title-line"></div>
-        <h2 class="section-title">Parcours</h2>
-        <p class="section-sub">Formation & expériences professionnelles</p>
-      </div>
-
-      <div class="parcours-cols">
-        <!-- FORMATION -->
-        <div class="reveal">
-          <div class="parcours-col-title">
-            <div class="col-icon">🎓</div> Formation
-          </div>
-          <div class="p-timeline">
-
-            <div class="p-card">
-              <div class="p-card-top">
-                <div class="p-card-logo">🏫</div>
-                <div>
-                  <div class="p-card-name">BTS SIO SISR</div>
-                  <div class="p-card-dates">2025 – 2027</div>
-                  <div class="p-card-org">Lycée Georges Brassens · Rive-de-Gier</div>
-                </div>
-              </div>
-              <div class="p-card-desc">Formation spécialisée en Solutions d'Infrastructure, Systèmes et Réseaux. Labs Windows Server, Linux, VMware, GLPI, Cisco Packet Tracer.</div>
-              <button class="btn-savoir" onclick="openModal('modal-bts')">En savoir plus... →</button>
-            </div>
-
-            <div class="p-card">
-              <div class="p-card-top">
-                <div class="p-card-logo">🎒</div>
-                <div>
-                  <div class="p-card-name">Bac STI2D option SIN</div>
-                  <div class="p-card-dates">2023 – 2025</div>
-                  <div class="p-card-org">Cité scolaire Claude Lebois · Saint-Chamond</div>
-                </div>
-              </div>
-              <div class="p-card-desc">Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable — option Systèmes d'Information et Numérique.</div>
-              <button class="btn-savoir" onclick="openModal('modal-bac')">En savoir plus... →</button>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- EXPERIENCE -->
-        <div class="reveal reveal-delay-1">
-          <div class="parcours-col-title">
-            <div class="col-icon">💼</div> Expérience
-          </div>
-          <div class="p-timeline">
-
-            <div class="p-card" style="border-color:rgba(37,99,235,0.3)">
-              <div class="p-card-top">
-                <div class="p-card-logo" style="background:rgba(37,99,235,0.15)">🏢</div>
-                <div>
-                  <div class="p-card-name">Stage BTS SIO SISR</div>
-                  <div class="p-card-dates">18 mai – 3 juillet 2026</div>
-                  <div class="p-card-org">2IT Solutions · Saint-Étienne</div>
-                </div>
-              </div>
-              <div class="p-card-desc">Stage de 7 semaines en ESN. Support, infrastructure réseaux et systèmes en environnement professionnel réel.</div>
-              <button class="btn-savoir" onclick="openModal('modal-stage')">En savoir plus... →</button>
-            </div>
-
-            <div class="p-card">
-              <div class="p-card-top">
-                <div class="p-card-logo">🏭</div>
-                <div>
-                  <div class="p-card-name">Stage d'observation</div>
-                  <div class="p-card-dates">Janvier 2022</div>
-                  <div class="p-card-org">Atalian · Saint-Étienne</div>
-                </div>
-              </div>
-              <div class="p-card-desc">Découverte du milieu professionnel industriel, observation des activités et des procédures de sécurité en entreprise de services.</div>
-              <button class="btn-savoir" onclick="openModal('modal-atalian')">En savoir plus... →</button>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ══ MODALS ══ -->
-
-<!-- MODAL BTS -->
-<div class="modal-overlay" id="modal-bts" onclick="closeModalOutside(event,'modal-bts')">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div><div class="modal-title">BTS SIO — Option SISR</div><div class="modal-subtitle">Lycée Georges Brassens · Rive-de-Gier · 2025–2027</div></div>
-      <button class="modal-close" onclick="closeModal('modal-bts')">✕</button>
-    </div>
-    <div class="modal-simple-content">
-      <p style="margin-bottom:1rem">Formation en <strong>Solutions d'Infrastructure, Systèmes et Réseaux</strong> sur 2 ans. Enseignements théoriques et pratiques en labs virtualisés couvrant l'ensemble des compétences d'un technicien réseau et systèmes.</p>
-      <p style="margin-bottom:0.7rem"><strong>Matières principales :</strong></p>
-      <ul style="padding-left:1.2rem;margin-bottom:1rem">
-        <li>Administration Windows Server (AD, GPO, DNS, DHCP)</li>
-        <li>Administration Linux Debian (services, scripts, pare-feu)</li>
-        <li>Réseaux : TCP/IP, routage, VLAN, Cisco Packet Tracer</li>
-        <li>Virtualisation VMware</li>
-        <li>Gestion de parc avec GLPI</li>
-        <li>Cybersécurité et règles de sécurité réseau</li>
-      </ul>
-      <p><strong>Certifications obtenues :</strong> PIX · CNIL · SecNumacadémie (ANSSI)</p>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL BAC -->
-<div class="modal-overlay" id="modal-bac" onclick="closeModalOutside(event,'modal-bac')">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div><div class="modal-title">Bac STI2D — Option SIN</div><div class="modal-subtitle">Cité scolaire Claude Lebois · Saint-Chamond · 2023–2025</div></div>
-      <button class="modal-close" onclick="closeModal('modal-bac')">✕</button>
-    </div>
-    <div class="modal-simple-content">
-      <p style="margin-bottom:1rem">Baccalauréat <strong>Sciences et Technologies de l'Industrie et du Développement Durable</strong>, option Systèmes d'Information et Numérique.</p>
-      <ul style="padding-left:1.2rem">
-        <li>Bases en électronique et systèmes embarqués</li>
-        <li>Programmation (Python, C, Arduino)</li>
-        <li>Réseaux numériques et protocoles de communication</li>
-        <li>Projets technologiques pluridisciplinaires</li>
-        <li>Mathématiques et physique appliquées</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL STAGE 2IT -->
-<div class="modal-overlay" id="modal-stage" onclick="closeModalOutside(event,'modal-stage')">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div><div class="modal-title">Stage chez 2IT Solutions</div><div class="modal-subtitle">Saint-Étienne · 18 mai – 3 juillet 2026 · 7 semaines</div></div>
-      <button class="modal-close" onclick="closeModal('modal-stage')">✕</button>
-    </div>
-    <p style="font-size:13px;color:var(--text-muted);margin-bottom:1.2rem;line-height:1.7">Déroulement de mon stage semaine par semaine au sein de l'ESN 2IT Solutions à Saint-Étienne.</p>
-    <div class="semaines-list">
-
-      <div class="semaine-item">
-        <div class="semaine-header" onclick="toggleSemaine(this)">
-          <div class="semaine-num">
-            <div class="s-badge">S1</div>
-            <div><div class="s-title">Intégration & premières interventions</div><div class="s-dates">18 – 23 mai 2026</div></div>
-          </div>
-          <span class="s-arrow">▼</span>
-        </div>
-        <div class="semaine-body">
-          <strong>Lundi 18/05 — Arrivée & première intervention</strong><br>
-          <ul>
-            <li>Présentation des locaux, du personnel et installation de mon bureau</li>
-            <li>Mise à jour du portfolio (correction du formulaire de contact)</li>
-            <li>Avancement projets personnels : Cisco CCNA et révisions des trames</li>
-            <li><strong>Intervention client LCL42 :</strong> Diagnostic d'un poste téléphonique IP en panne. Après test de la batterie, le problème provenait du téléphone lui-même. Remplacement par un nouveau modèle Yealink, configuration via l'interface web (affectation sur la ligne 1, l'ancien poste étant incorrectement configuré sur la ligne 2), intégration au groupe de sonnerie. Test final validé par appel déclenchant la sonnerie sur l'ensemble des postes.</li>
-          </ul>
-          <br>
-          <strong>Mardi 19/05 — Cisco Packet Tracer</strong><br>
-          <ul>
-            <li>Création de plusieurs réseaux avec Cisco Packet Tracer : routeurs, switches, PC, DHCP, VLANs</li>
-            <li>Continuation de la formation Cisco CCNA</li>
-          </ul>
-          <br>
-          <strong>Mercredi 20/05 — Linux & réseaux</strong><br>
-          <ul>
-            <li>Implémentation d'un réseau d'entreprise sur Cisco Packet Tracer</li>
-            <li>Installation d'une Debian 12 (VM) via Oracle VirtualBox</li>
-          </ul>
-          <br>
-          <strong>Jeudi 21/05 — Configuration équipements réels</strong><br>
-          <ul>
-            <li>Résolution d'un problème de driver pour câble console USB (adaptateur Prolific PL2303 incompatible Windows 11) — installation manuelle du driver compatible</li>
-            <li>Connexion au routeur Cisco C888 via PuTTY (liaison série COM3, 9600 bauds)</li>
-            <li>Récupération du mot de passe enable via mode ROMMON (interruption au démarrage, modification du registre confreg 0x2142)</li>
-            <li>Configuration de base du routeur : hostname, mots de passe, adresse IP 192.168.1.1/24 sur Vlan1, activation du routage IP</li>
-            <li>Connexion au switch Netgear ProSAFE M4100-D10-POE, configuration IP statique sur poste (192.168.1.2/24), test ping 0% perte</li>
-            <li>Présentation de l'infrastructure réseau de l'entreprise : 3 connexions fibre redondantes, datacenters et routeurs en haute disponibilité, téléphonie IP Yealink et Alcatel</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="semaine-item">
-        <div class="semaine-header" onclick="toggleSemaine(this)">
-          <div class="semaine-num">
-            <div class="s-badge">S2</div>
-            <div><div class="s-title">Semaine 2</div><div class="s-dates">26 – 30 mai 2026</div></div>
-          </div>
-          <span class="s-arrow">▼</span>
-        </div>
-        <div class="semaine-body">À compléter — décris ici les missions de ta deuxième semaine...</div>
-      </div>
-
-      <div class="semaine-item">
-        <div class="semaine-header" onclick="toggleSemaine(this)">
-          <div class="semaine-num">
-            <div class="s-badge">S3</div>
-            <div><div class="s-title">Semaine 3</div><div class="s-dates">2 – 6 juin 2026</div></div>
-          </div>
-          <span class="s-arrow">▼</span>
-        </div>
-        <div class="semaine-body">À compléter...</div>
-      </div>
-
-      <div class="semaine-item">
-        <div class="semaine-header" onclick="toggleSemaine(this)">
-          <div class="semaine-num">
-            <div class="s-badge">S4</div>
-            <div><div class="s-title">Semaine 4</div><div class="s-dates">9 – 13 juin 2026</div></div>
-          </div>
-          <span class="s-arrow">▼</span>
-        </div>
-        <div class="semaine-body">À compléter...</div>
-      </div>
-
-      <div class="semaine-item">
-        <div class="semaine-header" onclick="toggleSemaine(this)">
-          <div class="semaine-num">
-            <div class="s-badge">S5</div>
-            <div><div class="s-title">Semaine 5</div><div class="s-dates">16 – 20 juin 2026</div></div>
-          </div>
-          <span class="s-arrow">▼</span>
-        </div>
-        <div class="semaine-body">À compléter...</div>
-      </div>
-
-      <div class="semaine-item">
-        <div class="semaine-header" onclick="toggleSemaine(this)">
-          <div class="semaine-num">
-            <div class="s-badge">S6</div>
-            <div><div class="s-title">Semaine 6</div><div class="s-dates">23 – 27 juin 2026</div></div>
-          </div>
-          <span class="s-arrow">▼</span>
-        </div>
-        <div class="semaine-body">À compléter...</div>
-      </div>
-
-      <div class="semaine-item">
-        <div class="semaine-header" onclick="toggleSemaine(this)">
-          <div class="semaine-num">
-            <div class="s-badge">S7</div>
-            <div><div class="s-title">Bilan & restitution</div><div class="s-dates">30 juin – 3 juillet 2026</div></div>
-          </div>
-          <span class="s-arrow">▼</span>
-        </div>
-        <div class="semaine-body">À compléter — bilan de fin de stage, restitution, rapport...</div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- MODAL ATALIAN -->
-<div class="modal-overlay" id="modal-atalian" onclick="closeModalOutside(event,'modal-atalian')">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div><div class="modal-title">Stage d'observation — Atalian</div><div class="modal-subtitle">Saint-Étienne · Janvier 2022</div></div>
-      <button class="modal-close" onclick="closeModal('modal-atalian')">✕</button>
-    </div>
-    <div class="modal-simple-content">
-      <p style="margin-bottom:1rem">Stage d'observation au sein d'<strong>Atalian</strong>, entreprise spécialisée dans la gestion des services de nettoyage et de maintenance industrielle.</p>
-      <ul style="padding-left:1.2rem">
-        <li>Découverte du milieu professionnel et de l'organisation d'une grande entreprise de services</li>
-        <li>Observation des activités quotidiennes et compréhension des flux opérationnels</li>
-        <li>Sensibilisation aux règles de sécurité et procédures techniques en environnement industriel</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════
-     PAGE : PROJETS
-══════════════════════════════════════════ -->
-<div id="page-projets" class="page">
-  <section style="min-height:100vh;display:flex;align-items:center;padding-top:7rem;padding-bottom:4rem;">
-    <div class="wrapper" style="width:100%">
-      <div class="section-header reveal">
-        <div class="title-line"></div>
-        <h2 class="section-title">Projets</h2>
-        <p class="section-sub">Travaux pratiques et projets scolaires BTS SIO</p>
-      </div>
-      <div class="projets-grid">
-        <div class="projet-card reveal">
-          <div class="projet-card-header">
-            <div class="projet-icon">🖥️</div>
-            <div>
-              <div class="projet-title">Infrastructure Windows Server</div>
-              <div class="projet-date">BTS SIO · 2025–2026</div>
-            </div>
-          </div>
-          <p class="projet-desc">Déploiement complet d'un Active Directory sur Windows Server : gestion des utilisateurs, GPO, scripts de connexion, mappage de lecteurs réseau (X: → \\DC1\Partage) et copie de fichiers sur le bureau.</p>
-          <div class="projet-tags">
-            <span class="ptag">Windows Server</span><span class="ptag">Active Directory</span><span class="ptag">GPO</span><span class="ptag">DNS</span>
-          </div>
-        </div>
-        <div class="projet-card reveal reveal-delay-1">
-          <div class="projet-card-header">
-            <div class="projet-icon">🛡️</div>
-            <div>
-              <div class="projet-title">Pare-feu Debian / IPTables</div>
-              <div class="projet-date">BTS SIO · 2025–2026</div>
-            </div>
-          </div>
-          <p class="projet-desc">Configuration d'une passerelle Debian Linux faisant office de routeur/pare-feu : activation du routage IP, règles IPTables, MASQUERADE pour le NAT sortant, et règles DNAT pour rediriger le trafic entrant.</p>
-          <div class="projet-tags">
-            <span class="ptag">Debian</span><span class="ptag">IPTables</span><span class="ptag">NAT</span><span class="ptag">DNAT</span>
-          </div>
-        </div>
-        <div class="projet-card reveal reveal-delay-2">
-          <div class="projet-card-header">
-            <div class="projet-icon">🎫</div>
-            <div>
-              <div class="projet-title">Déploiement GLPI</div>
-              <div class="projet-date">BTS SIO · 2025–2026</div>
-            </div>
-          </div>
-          <p class="projet-desc">Installation et configuration complète de GLPI 10.0.17 sur Debian avec Apache2, MariaDB et intégration LDAP sur l'Active Directory sio.local. Déploiement de l'agent GLPI via GPO sur les postes clients Windows.</p>
-          <div class="projet-tags">
-            <span class="ptag">GLPI</span><span class="ptag">MariaDB</span><span class="ptag">Apache2</span><span class="ptag">LDAP</span>
-          </div>
-        </div>
-        <div class="projet-card reveal reveal-delay-3">
-          <div class="projet-card-header">
-            <div class="projet-icon">🌐</div>
-            <div>
-              <div class="projet-title">Serveur DHCP KEA & Cisco PT</div>
-              <div class="projet-date">BTS SIO · 2025–2026</div>
-            </div>
-          </div>
-          <p class="projet-desc">Configuration d'un serveur KEA DHCP4 sous Debian avec pools d'adresses et réservations statiques. Simulations de topologies réseau complètes avec Cisco Packet Tracer (routage, VLANs, protocoles).</p>
-          <div class="projet-tags">
-            <span class="ptag">KEA DHCP</span><span class="ptag">Debian</span><span class="ptag">Cisco</span><span class="ptag">Packet Tracer</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<!-- ══════════════════════════════════════════
-     PAGE : VEILLE
-══════════════════════════════════════════ -->
+<!-- ══ VEILLE ══ -->
 <div id="page-veille" class="page">
-  <section style="min-height:100vh;display:flex;align-items:center;padding-top:7rem;padding-bottom:4rem;">
+  <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
       <div class="section-header reveal">
         <div class="title-line"></div>
         <h2 class="section-title">Veille Technologique</h2>
-        <p class="section-sub">Mes centres d'intérêt et sujets de veille</p>
+        <p class="section-sub">Sujet : La VAR dans le football</p>
       </div>
-      <!-- INTRO VAR -->
-      <div class="glass-card reveal" style="margin-bottom:1.5rem;display:flex;align-items:center;gap:1.5rem">
-        <div style="font-size:52px;flex-shrink:0">⚽</div>
-        <div>
-          <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.3rem">Sujet de veille · BTS SIO SISR</div>
-          <div style="font-size:22px;font-weight:800;color:var(--text-dark);letter-spacing:-0.02em;margin-bottom:0.3rem">La VAR dans le football</div>
-          <div style="font-size:13px;color:var(--text-muted)">Comment l'infrastructure réseau et systèmes derrière la Video Assistant Referee rejoint directement les compétences SISR</div>
-        </div>
+      <div class="glass-card reveal" style="margin-bottom:1.8rem">
+        <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem">BTS SIO SISR — Sujet de veille</div>
+        <div style="font-size:20px;font-weight:800;color:var(--text-dark);margin-bottom:0.5rem">La VAR dans le football</div>
+        <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7">La Video Assistant Referee (VAR) est bien plus qu'une technologie sportive : c'est une infrastructure IT critique qui mobilise des competences directement liees au BTS SIO SISR — reseaux haute disponibilite, serveurs temps reel et securite des systemes.</p>
       </div>
-
-      <!-- CARDS THEMATIQUES -->
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem">
-
-        <div class="veille-card reveal" style="grid-column:1/-1">
-          <div class="veille-icon">📡</div>
-          <div class="veille-title">Infrastructure réseau : le cœur de la VAR</div>
-          <p class="veille-text">
-            La VAR repose sur un réseau fibre optique dédié à très haut débit déployé dans chaque stade. Entre <strong>8 et 33 caméras 4K/120fps</strong> transmettent simultanément leurs flux vers une salle de contrôle distante (la <em>Video Operation Room</em>). Pour éviter tout délai, la latence end-to-end doit rester <strong>sous les 100 ms</strong> — une contrainte réseau directement liée aux notions de QoS, VLAN et gestion de bande passante étudiées en SISR.
-            <br><br>
-            La redondance est totale : liens fibre doublés, switches redondants, alimentation secourue. Si un lien tombe, le basculement doit être transparent. C'est exactement le principe de <strong>haute disponibilité</strong> qu'on applique en infrastructure SISR sur les serveurs et équipements réseau.
-          </p>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem">
-            <span class="stag">Fibre optique</span><span class="stag">QoS</span><span class="stag">VLAN</span><span class="stag">&lt; 100ms latence</span><span class="stag">Haute disponibilité</span>
-          </div>
+        <div class="veille-card reveal">
+          <div class="veille-title">Infrastructure reseau</div>
+          <p class="veille-text">La VAR repose sur un reseau fibre optique dedie a tres haut debit dans chaque stade. Entre 8 et 33 cameras 4K transmettent leurs flux vers une salle de controle avec une latence inferieure a 100 ms. Les liens sont doubles, les switches redondants — exactement les notions de QoS, VLAN et haute disponibilite etudiees en SISR.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem"><span class="stag">Fibre optique</span><span class="stag">QoS</span><span class="stag">VLAN</span><span class="stag">Redondance</span></div>
         </div>
-
         <div class="veille-card reveal reveal-delay-1">
-          <div class="veille-icon">🖥️</div>
-          <div class="veille-title">Serveurs & stockage temps réel</div>
-          <p class="veille-text">
-            Les flux vidéo de la VAR sont capturés, encodés et stockés en temps réel sur des serveurs locaux dans le stade. La technologie <strong>SAOT</strong> (Semi-Automated Offside Technology) génère 500 données par seconde par ballon, traitées instantanément. Cela implique des serveurs haute performance avec des baies de stockage NVMe à très faible latence — une architecture qu'un technicien SISR est amené à administrer au quotidien.
-          </p>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem">
-            <span class="stag">Serveurs</span><span class="stag">Stockage NVMe</span><span class="stag">SAOT</span><span class="stag">Temps réel</span>
-          </div>
+          <div class="veille-title">Serveurs & stockage temps reel</div>
+          <p class="veille-text">Les flux video sont captures et stockes instantanement sur des serveurs locaux au stade. La technologie SAOT genere 500 donnees par seconde par ballon, traitees sur des baies de stockage NVMe a faible latence — une architecture que les techniciens SISR administrent au quotidien.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem"><span class="stag">Serveurs</span><span class="stag">NVMe</span><span class="stag">Temps reel</span><span class="stag">SAOT</span></div>
         </div>
-
         <div class="veille-card reveal reveal-delay-2">
-          <div class="veille-icon">🔒</div>
-          <div class="veille-title">Sécurité & intégrité des données</div>
-          <p class="veille-text">
-            Les flux VAR sont des données sensibles : toute manipulation pourrait fausser le résultat d'un match. Les systèmes sont isolés sur des <strong>réseaux privés cloisonnés</strong>, inaccessibles depuis Internet. L'accès à la salle VAR est contrôlé par authentification forte, et les enregistrements sont horodatés et chiffrés. Des problématiques de <strong>sécurité réseau et d'administration système</strong> directement au programme du BTS SIO SISR.
-          </p>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem">
-            <span class="stag">Réseau privé</span><span class="stag">Chiffrement</span><span class="stag">Authentification</span><span class="stag">Cloisonnement</span>
-          </div>
+          <div class="veille-title">Securite & cloisonnement</div>
+          <p class="veille-text">Les systemes VAR sont isoles sur des reseaux prives inaccessibles depuis Internet. Les acces sont controles par authentification forte, les enregistrements horodates et chiffres pour garantir l'integrite des decisions arbitrales.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem"><span class="stag">Reseau prive</span><span class="stag">Chiffrement</span><span class="stag">Authentification</span></div>
         </div>
-
-        <div class="veille-card reveal" style="background:rgba(37,99,235,0.06);border-color:rgba(37,99,235,0.25)">
-          <div class="veille-icon">🎓</div>
+        <div class="veille-card reveal reveal-delay-3" style="background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2)">
           <div class="veille-title">Lien avec le BTS SIO SISR</div>
-          <p class="veille-text">
-            La VAR est un cas concret d'application des compétences SISR en conditions réelles et critiques :<br><br>
-            <strong>→ Réseaux :</strong> TCP/IP, VLAN, QoS, fibre, redondance<br>
-            <strong>→ Systèmes :</strong> serveurs de stockage, Windows/Linux, administration<br>
-            <strong>→ Sécurité :</strong> cloisonnement réseau, chiffrement, contrôle d'accès<br>
-            <strong>→ Disponibilité :</strong> tolérance de panne, PRA, supervision<br><br>
-            Un stade équipé VAR, c'est une vraie infrastructure IT critique — comme un datacenter, mais pour un match de foot.
-          </p>
+          <p class="veille-text"><strong>Reseaux :</strong> TCP/IP, VLAN, QoS, fibre, redondance<br><strong>Systemes :</strong> administration serveurs, Windows / Linux<br><strong>Securite :</strong> cloisonnement reseau, chiffrement, acces<br><strong>Disponibilite :</strong> tolerance aux pannes, PRA, supervision</p>
         </div>
-
       </div>
     </div>
   </section>
 </div>
 
-<!-- ══════════════════════════════════════════
-     PAGE : CONTACT
-══════════════════════════════════════════ -->
+<!-- ══ FORMATION ══ -->
+<div id="page-formation" class="page">
+  <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
+    <div class="wrapper" style="width:100%">
+      <div class="section-header reveal">
+        <div class="title-line"></div>
+        <h2 class="section-title">Formation</h2>
+        <p class="section-sub">Parcours scolaire et professionnel</p>
+      </div>
+      <div class="parcours-cols">
+        <div class="reveal">
+          <div class="parcours-col-title">Formation</div>
+          <div class="p-timeline">
+            <div class="p-card">
+              <div class="p-card-name">BTS SIO SISR</div>
+              <div class="p-card-dates">2025 – 2027</div>
+              <div class="p-card-org">Lycee Georges Brassens · Rive-de-Gier</div>
+              <div class="p-card-desc">Solutions d'Infrastructure, Systemes et Reseaux. Labs Windows Server, Linux, VMware, GLPI, Cisco Packet Tracer.</div>
+              <button class="btn-savoir" onclick="openModal('modal-bts')">En savoir plus →</button>
+            </div>
+            <div class="p-card">
+              <div class="p-card-name">Bac STI2D option SIN</div>
+              <div class="p-card-dates">2023 – 2025</div>
+              <div class="p-card-org">Cite scolaire Claude Lebois · Saint-Chamond</div>
+              <div class="p-card-desc">Baccalaureat Sciences et Technologies de l'Industrie — option Systemes d'Information et Numerique.</div>
+              <button class="btn-savoir" onclick="openModal('modal-bac')">En savoir plus →</button>
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="parcours-col-title">Experience</div>
+          <div class="p-timeline">
+            <div class="p-card" style="border-color:rgba(37,99,235,0.3)">
+              <div class="p-card-name">Stage BTS SIO SISR</div>
+              <div class="p-card-dates">18 mai – 3 juillet 2026</div>
+              <div class="p-card-org">2IT Solutions · Saint-Etienne</div>
+              <div class="p-card-desc">Stage de 7 semaines en ESN. Support, infrastructure reseaux et systemes en environnement professionnel reel.</div>
+              <button class="btn-savoir" onclick="showPage('stage',null);return false">Voir le detail →</button>
+            </div>
+            <div class="p-card">
+              <div class="p-card-name">Stage d'observation</div>
+              <div class="p-card-dates">Janvier 2022</div>
+              <div class="p-card-org">Atalian · Saint-Etienne</div>
+              <div class="p-card-desc">Decouverte du milieu professionnel industriel et des procedures de securite en entreprise de services.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ CERTIFICATIONS ══ -->
+<div id="page-certifications" class="page">
+  <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
+    <div class="wrapper" style="width:100%">
+      <div class="section-header reveal">
+        <div class="title-line"></div>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-sub">Competences certifiees</p>
+      </div>
+      <div class="certs-grid reveal">
+        <div class="cert-card">
+          <div class="cert-badge">P</div>
+          <div class="cert-name">Certification PIX</div>
+          <div class="cert-org">GIP PIX · Competences numeriques</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">C</div>
+          <div class="cert-name">Certification CNIL</div>
+          <div class="cert-org">CNIL · Protection des donnees personnelles</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-badge">S</div>
+          <div class="cert-name">SecNumademie</div>
+          <div class="cert-org">ANSSI · Cybersecurite</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ TABLEAU E5 ══ -->
+<div id="page-tableau" class="page">
+  <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
+    <div class="wrapper" style="width:100%">
+      <div class="section-header reveal">
+        <div class="title-line"></div>
+        <h2 class="section-title">Tableau de synthese E5</h2>
+        <p class="section-sub">Epreuve orale E5 — BTS SIO Session 2026</p>
+      </div>
+      <div class="e5-info reveal">
+        <strong>Hossam ABOUHALI</strong> · Option SISR · Lycee Georges Brassens, Rive-de-Gier<br>
+        Portfolio : <strong>https://hossam4242.github.io/hossam-abouhali-portfolio.github.io/</strong>
+      </div>
+      <div class="e5-table-wrap reveal">
+        <table class="e5-table">
+          <thead>
+            <tr>
+              <th class="left" style="width:38%">Realisation professionnelle</th>
+              <th style="width:13%">Periode</th>
+              <th style="width:8%">C1<br>Patrimoine</th>
+              <th style="width:8%">C2<br>Incidents</th>
+              <th style="width:8%">C3<br>En ligne</th>
+              <th style="width:8%">C4<br>Projet</th>
+              <th style="width:8%">C5<br>Service</th>
+              <th style="width:8%">C6<br>Dev. Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="e5-section-row"><td colspan="8">Realisations en cours de formation</td></tr>
+            <tr>
+              <td class="e5-realisation">Configuration de VLANs et routage sur Cisco Packet Tracer</td>
+              <td class="center e5-period">09/2025 – 11/2025</td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+            </tr>
+            <tr>
+              <td class="e5-realisation">Mise en place d'un Active Directory sous Windows Server (TP)</td>
+              <td class="center e5-period">11/2025 – 12/2025</td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+            </tr>
+            <tr>
+              <td class="e5-realisation">Mise en place d'un serveur DHCP et DNS sous Linux Debian (TP)</td>
+              <td class="center e5-period">01/2026 – 02/2026</td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+            </tr>
+            <tr>
+              <td class="e5-realisation">Veille technologique — La VAR dans le football</td>
+              <td class="center e5-period">10/2025 – 05/2026</td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+            </tr>
+            <tr>
+              <td class="e5-realisation">Portfolio BTS SIO SISR (ce site web)</td>
+              <td class="center e5-period">03/2026 – 05/2026</td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+            </tr>
+            <tr class="e5-section-row"><td colspan="8">Realisations en milieu professionnel — 1ere annee</td></tr>
+            <tr>
+              <td class="e5-realisation">Remplacement et configuration d'un poste telephonique IP Yealink — client LCL42</td>
+              <td class="center e5-period">18/05/2026</td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+            </tr>
+            <tr>
+              <td class="e5-realisation">Configuration d'un routeur Cisco C888 et switch Netgear — recuperation mot de passe ROMMON</td>
+              <td class="center e5-period">21/05/2026</td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+            </tr>
+            <tr>
+              <td class="e5-realisation">Installation et configuration d'une VM Debian 12 sous Oracle VirtualBox</td>
+              <td class="center e5-period">20/05/2026</td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+              <td class="center"><span class="e5-check checked">✓</span></td>
+            </tr>
+            <tr class="e5-section-row"><td colspan="8">Realisations en milieu professionnel — 2eme annee</td></tr>
+            <tr style="opacity:0.4">
+              <td class="e5-realisation" style="color:var(--text-muted);font-style:italic">Intitule de la realisation...</td>
+              <td class="center e5-period">JJ/MM/AA</td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+              <td class="center"><span class="e5-check"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ STAGE ══ -->
+<div id="page-stage" class="page">
+  <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
+    <div class="wrapper" style="width:100%">
+      <div class="section-header reveal">
+        <div class="title-line"></div>
+        <h2 class="section-title">Stage</h2>
+        <p class="section-sub">2IT Solutions · Saint-Etienne · 18 mai – 3 juillet 2026</p>
+      </div>
+      <div class="glass-card reveal" style="margin-bottom:1.8rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.1em;margin-bottom:0.5rem">ENTREPRISE</div>
+          <div style="font-size:20px;font-weight:800;color:var(--text-dark);margin-bottom:0.3rem">2IT Solutions</div>
+          <div style="font-size:13px;color:var(--text-muted)">ESN (Entreprise de Services du Numerique)<br>Saint-Etienne, Loire (42)</div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.1em;margin-bottom:0.5rem">DETAILS</div>
+          <div class="info-row" style="padding:5px 0"><span class="info-label" style="min-width:80px">Duree</span><span class="info-val">7 semaines</span></div>
+          <div class="info-row" style="padding:5px 0"><span class="info-label" style="min-width:80px">Periode</span><span class="info-val">18 mai – 3 juillet 2026</span></div>
+          <div class="info-row" style="padding:5px 0"><span class="info-label" style="min-width:80px">Mission</span><span class="info-val">Support & infrastructure reseau</span></div>
+        </div>
+      </div>
+      <div class="semaines-list reveal">
+        <div class="semaine-item open">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num">
+              <div class="s-badge">S1</div>
+              <div><div class="s-title">Integration & premieres interventions</div><div class="s-dates">18 – 23 mai 2026</div></div>
+            </div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">
+            <strong>Lundi 18/05 — Arrivee & premiere intervention</strong><br>
+            <ul>
+              <li>Presentation des locaux, du personnel et installation de mon bureau</li>
+              <li>Mise a jour du portfolio (correction du formulaire de contact)</li>
+              <li>Avancement projets personnels : Cisco CCNA et revisions des trames</li>
+              <li><strong>Intervention client LCL42 :</strong> Diagnostic d'un poste telephonique IP en panne. Apres test de la batterie, le probleme provenait du telephone lui-meme. Remplacement par un nouveau modele Yealink, configuration via l'interface web (affectation sur la ligne 1, l'ancien poste etant incorrectement configure sur la ligne 2), integration au groupe de sonnerie. Test final valide par appel declenchant la sonnerie sur l'ensemble des postes.</li>
+            </ul>
+            <br>
+            <strong>Mardi 19/05 — Cisco Packet Tracer</strong><br>
+            <ul>
+              <li>Creation de plusieurs reseaux avec Cisco Packet Tracer : routeurs, switches, PC, DHCP, VLANs</li>
+              <li>Continuation de la formation Cisco CCNA</li>
+            </ul>
+            <br>
+            <strong>Mercredi 20/05 — Linux & reseaux</strong><br>
+            <ul>
+              <li>Implementation d'un reseau d'entreprise sur Cisco Packet Tracer</li>
+              <li>Installation d'une Debian 12 (VM) via Oracle VirtualBox</li>
+            </ul>
+            <br>
+            <strong>Jeudi 21/05 — Configuration equipements reels</strong><br>
+            <ul>
+              <li>Resolution d'un probleme de driver pour cable console USB (adaptateur Prolific PL2303 incompatible Windows 11) — identification dans le gestionnaire de peripheriques et installation manuelle du driver compatible</li>
+              <li>Connexion au routeur Cisco C888 via PuTTY en liaison serie (COM3, 9600 bauds)</li>
+              <li>Recuperation du mot de passe enable inconnu via mode ROMMON : interruption au demarrage, modification du registre de configuration (confreg 0x2142) pour demarrer sans charger la configuration existante</li>
+              <li>Configuration de base du routeur apres reinitialisation : hostname, mots de passe securises, adresse IP 192.168.1.1/24 sur l'interface Vlan1, activation du routage IP</li>
+              <li>Connexion du routeur au switch Netgear ProSAFE M4100-D10-POE via cable RJ45, configuration IP statique sur le poste de travail (192.168.1.2/24), verification de la connectivite par ping avec 0% de perte de paquets</li>
+              <li>Presentation par le tuteur de l'infrastructure reseau : 3 connexions fibre distinctes pour assurer la continuite de service, plusieurs datacenters et routeurs redondants en haute disponibilite</li>
+              <li>Decouverte des equipements de telephonie IP professionnelle : Yealink et Alcatel</li>
+            </ul>
+          </div>
+        </div>
+        <div class="semaine-item">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num"><div class="s-badge">S2</div><div><div class="s-title">Semaine 2</div><div class="s-dates">26 – 30 mai 2026</div></div></div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">A completer...</div>
+        </div>
+        <div class="semaine-item">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num"><div class="s-badge">S3</div><div><div class="s-title">Semaine 3</div><div class="s-dates">2 – 6 juin 2026</div></div></div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">A completer...</div>
+        </div>
+        <div class="semaine-item">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num"><div class="s-badge">S4</div><div><div class="s-title">Semaine 4</div><div class="s-dates">9 – 13 juin 2026</div></div></div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">A completer...</div>
+        </div>
+        <div class="semaine-item">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num"><div class="s-badge">S5</div><div><div class="s-title">Semaine 5</div><div class="s-dates">16 – 20 juin 2026</div></div></div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">A completer...</div>
+        </div>
+        <div class="semaine-item">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num"><div class="s-badge">S6</div><div><div class="s-title">Semaine 6</div><div class="s-dates">23 – 27 juin 2026</div></div></div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">A completer...</div>
+        </div>
+        <div class="semaine-item">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num"><div class="s-badge">S7</div><div><div class="s-title">Bilan & restitution</div><div class="s-dates">30 juin – 3 juillet 2026</div></div></div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">A completer — bilan de fin de stage, restitution, rapport...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ CONTACT ══ -->
 <div id="page-contact" class="page">
-  <section style="min-height:100vh;display:flex;align-items:center;padding-top:7rem;padding-bottom:4rem;">
+  <section style="min-height:100vh;display:flex;align-items:center;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
       <div class="section-header reveal">
         <div class="title-line"></div>
         <h2 class="section-title">Contact</h2>
-        <p class="section-sub">N'hésitez pas à me contacter</p>
+        <p class="section-sub">N'hesitez pas a me contacter</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info reveal">
           <a href="mailto:hossam.abouhali@gmail.com" class="contact-item">
-            <div class="contact-icon">✉️</div>
-            <div>
-              <div class="contact-label">Email</div>
-              <div class="contact-val">hossam.abouhali@gmail.com</div>
-            </div>
+            <div class="contact-icon">@</div>
+            <div><div class="contact-label">Email</div><div class="contact-val">hossam.abouhali@gmail.com</div></div>
           </a>
           <a href="tel:+33765227665" class="contact-item">
-            <div class="contact-icon">📞</div>
-            <div>
-              <div class="contact-label">Téléphone</div>
-              <div class="contact-val">+33 07 65 22 76 65</div>
-            </div>
+            <div class="contact-icon">T</div>
+            <div><div class="contact-label">Telephone</div><div class="contact-val">+33 07 65 22 76 65</div></div>
           </a>
           <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <div>
-              <div class="contact-label">Localisation</div>
-              <div class="contact-val">Saint-Chamond, Loire (42)</div>
-            </div>
+            <div class="contact-icon">L</div>
+            <div><div class="contact-label">Localisation</div><div class="contact-val">Saint-Chamond, Loire (42)</div></div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">🏢</div>
-            <div>
-              <div class="contact-label">Stage actuel</div>
-              <div class="contact-val">2IT Solutions · Saint-Étienne</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">📅</div>
-            <div>
-              <div class="contact-label">Période de stage</div>
-              <div class="contact-val">18 mai → 3 juillet 2026</div>
-            </div>
+            <div class="contact-icon">S</div>
+            <div><div class="contact-label">Stage actuel</div><div class="contact-val">2IT Solutions · Saint-Etienne</div></div>
           </div>
         </div>
         <div class="contact-form reveal reveal-delay-1">
           <div class="form-title">Envoyer un message</div>
           <form action="https://formspree.io/f/xnjrqbey" method="POST" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-              <label>Nom & Prénom</label>
-              <input type="text" name="name" placeholder="Votre nom" required>
-            </div>
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" name="email" placeholder="votre@email.com" required>
-            </div>
-            <div class="form-group">
-              <label>Sujet</label>
-              <input type="text" name="subject" placeholder="Objet de votre message" required>
-            </div>
-            <div class="form-group">
-              <label>Message</label>
-              <textarea name="message" placeholder="Votre message..." required></textarea>
-            </div>
+            <div class="form-group"><label>Nom & Prenom</label><input type="text" name="name" placeholder="Votre nom" required></div>
+            <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="votre@email.com" required></div>
+            <div class="form-group"><label>Sujet</label><input type="text" name="subject" placeholder="Objet de votre message" required></div>
+            <div class="form-group"><label>Message</label><textarea name="message" placeholder="Votre message..." required></textarea></div>
             <button type="submit" class="btn-send">Envoyer le message</button>
-            <p id="form-success" style="display:none;margin-top:1rem;color:#16a34a;font-size:13px;font-weight:600;text-align:center">Message envoyé ! Je vous répondrai dès que possible.</p>
-            <p id="form-error" style="display:none;margin-top:1rem;color:#dc2626;font-size:13px;font-weight:600;text-align:center">Une erreur est survenue. Réessayez ou contactez-moi par email.</p>
+            <p id="form-success" style="display:none;margin-top:1rem;color:#16a34a;font-size:13px;font-weight:600;text-align:center">Message envoye ! Je vous repondrai des que possible.</p>
+            <p id="form-error" style="display:none;margin-top:1rem;color:#dc2626;font-size:13px;font-weight:600;text-align:center">Une erreur est survenue. Reessayez ou contactez-moi par email.</p>
           </form>
         </div>
       </div>
@@ -1400,92 +734,82 @@ body.dark .semaine-item { background: rgba(255,255,255,0.04); }
   </section>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <span>© 2026 · Hossam Abouhali · BTS SIO SISR · Lycée Georges Brassens, Rive-de-Gier</span>
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-bts" onclick="closeModalOutside(event,'modal-bts')">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div><div class="modal-title">BTS SIO — Option SISR</div><div class="modal-subtitle">Lycee Georges Brassens · Rive-de-Gier · 2025–2027</div></div>
+      <button class="modal-close" onclick="closeModal('modal-bts')">x</button>
+    </div>
+    <p style="font-size:13.5px;color:var(--text-muted);line-height:1.8;margin-bottom:1rem">Formation en <strong style="color:var(--text-dark)">Solutions d'Infrastructure, Systemes et Reseaux</strong> sur 2 ans.</p>
+    <ul style="padding-left:1.2rem;font-size:13px;color:var(--text-muted);line-height:1.8">
+      <li>Administration Windows Server (AD, GPO, DNS, DHCP)</li>
+      <li>Administration Linux Debian (services, scripts, pare-feu)</li>
+      <li>Reseaux : TCP/IP, routage, VLAN, Cisco Packet Tracer</li>
+      <li>Virtualisation VMware / VirtualBox</li>
+      <li>Gestion de parc avec GLPI</li>
+      <li>Cybersecurite et regles de securite reseau</li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-bac" onclick="closeModalOutside(event,'modal-bac')">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div><div class="modal-title">Bac STI2D — Option SIN</div><div class="modal-subtitle">Cite scolaire Claude Lebois · Saint-Chamond · 2023–2025</div></div>
+      <button class="modal-close" onclick="closeModal('modal-bac')">x</button>
+    </div>
+    <ul style="padding-left:1.2rem;font-size:13px;color:var(--text-muted);line-height:1.8">
+      <li>Bases en electronique et systemes embarques</li>
+      <li>Programmation (Python, C, Arduino)</li>
+      <li>Reseaux numeriques et protocoles de communication</li>
+      <li>Projets technologiques pluridisciplinaires</li>
+    </ul>
+  </div>
+</div>
+
+<footer style="position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid rgba(37,99,235,0.1);font-size:12px;color:var(--text-muted)">
+  © 2026 · Hossam Abouhali · BTS SIO SISR · Lycee Georges Brassens, Rive-de-Gier
 </footer>
 
 <script>
-// ── Navigation SPA ──
 function showPage(id, linkEl) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   document.querySelectorAll('nav a[data-page]').forEach(a => a.classList.remove('current'));
   if (linkEl) linkEl.classList.add('current');
-  else {
-    const match = document.querySelector('nav a[data-page="'+id+'"]');
-    if (match) match.classList.add('current');
-  }
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  else { const m = document.querySelector('nav a[data-page="'+id+'"]'); if(m) m.classList.add('current'); }
+  window.scrollTo({top:0,behavior:'smooth'});
   setTimeout(triggerReveal, 100);
-  return false;
 }
-
-// ── Reveal on load/page change ──
 function triggerReveal() {
-  document.querySelectorAll('.page.active .reveal').forEach(el => {
-    el.classList.add('visible');
-  });
+  document.querySelectorAll('.page.active .reveal').forEach(el => el.classList.add('visible'));
 }
 setTimeout(triggerReveal, 100);
-
-// ── Dark mode ──
 function toggleDark() {
   document.body.classList.toggle('dark');
-  const btn = document.querySelector('.btn-theme');
-  btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+  document.querySelector('.btn-theme').textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 }
-
-// ── Formspree submit ──
-async function handleSubmit(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('.btn-send');
-  btn.textContent = 'Envoi en cours...';
-  btn.disabled = true;
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    });
-    if (res.ok) {
-      form.reset();
-      document.getElementById('form-success').style.display = 'block';
-      document.getElementById('form-error').style.display = 'none';
-      btn.textContent = 'Message envoyé';
-    } else {
-      throw new Error();
-    }
-  } catch {
-    document.getElementById('form-error').style.display = 'block';
-    btn.textContent = 'Envoyer le message';
-    btn.disabled = false;
-  }
-}
-
-// ── Modals ──
-function openModal(id) {
-  document.getElementById(id).classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal(id) {
-  document.getElementById(id).classList.remove('open');
-  document.body.style.overflow = '';
-}
-function closeModalOutside(e, id) {
-  if (e.target === document.getElementById(id)) closeModal(id);
-}
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') document.querySelectorAll('.modal-overlay.open').forEach(m => { m.classList.remove('open'); document.body.style.overflow=''; });
-});
-
-// ── Semaine accordéon ──
+function openModal(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
+function closeModalOutside(e,id) { if(e.target===document.getElementById(id)) closeModal(id); }
+document.addEventListener('keydown', e => { if(e.key==='Escape') document.querySelectorAll('.modal-overlay.open').forEach(m=>{m.classList.remove('open');document.body.style.overflow='';}) });
 function toggleSemaine(header) {
   const item = header.parentElement;
   const isOpen = item.classList.contains('open');
   document.querySelectorAll('.semaine-item.open').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
+  if(!isOpen) item.classList.add('open');
+}
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.btn-send');
+  btn.textContent = 'Envoi en cours...'; btn.disabled = true;
+  try {
+    const res = await fetch(form.action, {method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+    if(res.ok) { form.reset(); document.getElementById('form-success').style.display='block'; document.getElementById('form-error').style.display='none'; btn.textContent='Message envoye'; }
+    else throw new Error();
+  } catch { document.getElementById('form-error').style.display='block'; btn.textContent='Envoyer le message'; btn.disabled=false; }
 }
 </script>
 </body>
