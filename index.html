@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>H.ABOUHALI — Portfolio BTS SIO SISR</title>
+<title>HOSSAM.ABOUHALI — Portfolio BTS SIO SISR</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -1051,11 +1051,41 @@ body.dark .semaine-item { background: rgba(255,255,255,0.04); }
         <div class="semaine-header" onclick="toggleSemaine(this)">
           <div class="semaine-num">
             <div class="s-badge">S1</div>
-            <div><div class="s-title">Intégration & découverte</div><div class="s-dates">18 – 23 mai 2026</div></div>
+            <div><div class="s-title">Intégration & premières interventions</div><div class="s-dates">18 – 23 mai 2026</div></div>
           </div>
           <span class="s-arrow">▼</span>
         </div>
-        <div class="semaine-body">À compléter — décris ici ce que tu as fait lors de ta première semaine : présentation de l'entreprise, prise en main des outils, rencontre des équipes...</div>
+        <div class="semaine-body">
+          <strong>Lundi 18/05 — Arrivée & première intervention</strong><br>
+          <ul>
+            <li>Présentation des locaux, du personnel et installation de mon bureau</li>
+            <li>Mise à jour du portfolio (correction du formulaire de contact)</li>
+            <li>Avancement projets personnels : Cisco CCNA et révisions des trames</li>
+            <li><strong>Intervention client LCL42 :</strong> Diagnostic d'un poste téléphonique IP en panne. Après test de la batterie, le problème provenait du téléphone lui-même. Remplacement par un nouveau modèle Yealink, configuration via l'interface web (affectation sur la ligne 1, l'ancien poste étant incorrectement configuré sur la ligne 2), intégration au groupe de sonnerie. Test final validé par appel déclenchant la sonnerie sur l'ensemble des postes.</li>
+          </ul>
+          <br>
+          <strong>Mardi 19/05 — Cisco Packet Tracer</strong><br>
+          <ul>
+            <li>Création de plusieurs réseaux avec Cisco Packet Tracer : routeurs, switches, PC, DHCP, VLANs</li>
+            <li>Continuation de la formation Cisco CCNA</li>
+          </ul>
+          <br>
+          <strong>Mercredi 20/05 — Linux & réseaux</strong><br>
+          <ul>
+            <li>Implémentation d'un réseau d'entreprise sur Cisco Packet Tracer</li>
+            <li>Installation d'une Debian 12 (VM) via Oracle VirtualBox</li>
+          </ul>
+          <br>
+          <strong>Jeudi 21/05 — Configuration équipements réels</strong><br>
+          <ul>
+            <li>Résolution d'un problème de driver pour câble console USB (adaptateur Prolific PL2303 incompatible Windows 11) — installation manuelle du driver compatible</li>
+            <li>Connexion au routeur Cisco C888 via PuTTY (liaison série COM3, 9600 bauds)</li>
+            <li>Récupération du mot de passe enable via mode ROMMON (interruption au démarrage, modification du registre confreg 0x2142)</li>
+            <li>Configuration de base du routeur : hostname, mots de passe, adresse IP 192.168.1.1/24 sur Vlan1, activation du routage IP</li>
+            <li>Connexion au switch Netgear ProSAFE M4100-D10-POE, configuration IP statique sur poste (192.168.1.2/24), test ping 0% perte</li>
+            <li>Présentation de l'infrastructure réseau de l'entreprise : 3 connexions fibre redondantes, datacenters et routeurs en haute disponibilité, téléphonie IP Yealink et Alcatel</li>
+          </ul>
+        </div>
       </div>
 
       <div class="semaine-item">
