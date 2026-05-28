@@ -241,6 +241,7 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
     <li><a href="#" data-page="tableau" onclick="showPage('tableau',this);return false">Tableau E5</a></li>
     <li><a href="#" data-page="stage" onclick="showPage('stage',this);return false">Stage</a></li>
     <li><a href="#" data-page="contact" onclick="showPage('contact',this);return false">Contact</a></li>
+    <li><a href="#" data-page="cv" onclick="showPage('cv',this);return false">CV</a></li>
   </ul>
   <div class="nav-right">
     <a href="https://linkedin.com" class="btn-linkedin">LinkedIn</a>
@@ -271,6 +272,7 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
           <div class="info-row"><span class="info-label">Stage</span><span class="info-val">2IT Solutions, Saint-Etienne</span></div>
           <div class="info-row"><span class="info-label">Periode</span><span class="info-val">18 mai au 3 juillet 2026</span></div>
           <div class="info-row"><span class="info-label">Langues</span><span class="info-val">Francais (natif) · Anglais (B2) · Espagnol (B1)</span></div>
+          <div class="info-row"><span class="info-label">Permis</span><span class="info-val">Permis B</span></div>
           <div class="info-row"><span class="info-label">Email</span><span class="info-val">hossam.abouhali@gmail.com</span></div>
         </div>
       </div>
@@ -419,32 +421,196 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
       <div class="section-header reveal">
         <div class="title-line"></div>
         <h2 class="section-title">Certifications</h2>
-        <p class="section-sub">Competences certifiees</p>
+        <p class="section-sub">Competences certifiees — cliquez sur une certification pour voir l'attestation</p>
       </div>
-      <div class="certs-grid" style="grid-template-columns:repeat(4,1fr)" class="reveal">
-        <div class="cert-card">
-          <div class="cert-badge">R</div>
-          <div class="cert-name">Root-Me</div>
-          <div class="cert-org">Root-Me · Challenges cybersecurite</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem" class="reveal">
+
+        <!-- ROOT-ME -->
+        <div class="cert-card" onclick="openModal('modal-rootme')" style="cursor:pointer;text-align:left;padding:1.8rem">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+            <div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#1a1a2e,#16213e)">R</div>
+            <div>
+              <div class="cert-name">Root-Me</div>
+              <div class="cert-org">Challenges de cybersecurite</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:1.5rem;margin-bottom:0.8rem">
+            <div><div style="font-size:22px;font-weight:800;color:var(--blue)">4 610</div><div style="font-size:11px;color:var(--text-muted)">Points obtenus</div></div>
+            <div><div style="font-size:22px;font-weight:800;color:var(--blue)">43</div><div style="font-size:11px;color:var(--text-muted)">Challenges valides</div></div>
+            <div><div style="font-size:22px;font-weight:800;color:var(--blue)">39,9%</div><div style="font-size:11px;color:var(--text-muted)">Taux de validation</div></div>
+          </div>
+          <div style="font-size:11px;font-weight:600;color:var(--blue)">Voir l'attestation →</div>
         </div>
-        <div class="cert-card">
-          <div class="cert-badge">P</div>
-          <div class="cert-name">Certification PIX</div>
-          <div class="cert-org">GIP PIX · Competences numeriques</div>
+
+        <!-- PIX -->
+        <div class="cert-card" onclick="openModal('modal-pix')" style="cursor:pointer;text-align:left;padding:1.8rem">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+            <div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#7c3aed,#4f46e5)">P</div>
+            <div>
+              <div class="cert-name">Certification PIX</div>
+              <div class="cert-org">GIP PIX · 21 fevrier 2025</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:1.5rem;margin-bottom:0.8rem">
+            <div><div style="font-size:22px;font-weight:800;color:var(--blue)">366</div><div style="font-size:11px;color:var(--text-muted)">Score / 895</div></div>
+            <div><div style="font-size:14px;font-weight:700;color:#7c3aed;margin-top:4px">Independant 1</div><div style="font-size:11px;color:var(--text-muted)">Niveau global</div></div>
+          </div>
+          <div style="font-size:11px;font-weight:600;color:var(--blue)">Voir l'attestation →</div>
         </div>
-        <div class="cert-card">
-          <div class="cert-badge">C</div>
-          <div class="cert-name">Certification CNIL</div>
-          <div class="cert-org">CNIL · Protection des donnees personnelles</div>
+
+        <!-- CNIL -->
+        <div class="cert-card" onclick="openModal('modal-cnil')" style="cursor:pointer;text-align:left;padding:1.8rem">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+            <div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#0369a1,#0284c7)">C</div>
+            <div>
+              <div class="cert-name">Certifications CNIL — RGPD</div>
+              <div class="cert-org">CNIL · L'Atelier RGPD · 2025</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.8rem">
+            <span class="stag">Module 1 · 90%</span>
+            <span class="stag">Module 2 · 85%</span>
+            <span class="stag">Module 3 · 80%</span>
+            <span class="stag">Module 4 · 84%</span>
+            <span class="stag">Module 5 · 83%</span>
+            <span class="stag">Module 6 · 84%</span>
+          </div>
+          <div style="font-size:11px;font-weight:600;color:var(--blue)">Voir les attestations →</div>
         </div>
-        <div class="cert-card">
-          <div class="cert-badge">S</div>
-          <div class="cert-name">SecNumademie</div>
-          <div class="cert-org">ANSSI · Cybersecurite</div>
+
+        <!-- SECNUM -->
+        <div class="cert-card" onclick="openModal('modal-secnum')" style="cursor:pointer;text-align:left;padding:1.8rem">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
+            <div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#0f4c81,#1d6fa4)">S</div>
+            <div>
+              <div class="cert-name">SecNumademie</div>
+              <div class="cert-org">ANSSI · 16 janvier 2026</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.8rem">
+            <span class="stag">Panorama SSI · 80%</span>
+            <span class="stag">Authentification · 82%</span>
+            <span class="stag">Securite Internet · 90%</span>
+            <span class="stag">Poste de travail · 88%</span>
+          </div>
+          <div style="font-size:11px;font-weight:600;color:var(--blue)">Voir l'attestation →</div>
         </div>
+
       </div>
     </div>
   </section>
+</div>
+
+<!-- MODAL ROOT-ME -->
+<div class="modal-overlay" id="modal-rootme" onclick="closeModalOutside(event,'modal-rootme')">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div><div class="modal-title">Root-Me</div><div class="modal-subtitle">Plateforme de challenges cybersecurite</div></div>
+      <button class="modal-close" onclick="closeModal('modal-rootme')">x</button>
+    </div>
+    <img src="https://hossam4242.github.io/hossam-abouhali-portfolio.github.io/rootme.png" alt="Root-Me" style="width:100%;border-radius:12px;margin-bottom:1rem" onerror="this.style.display='none'">
+    <div style="display:flex;gap:2rem;padding:1rem;background:rgba(37,99,235,0.05);border-radius:12px;margin-bottom:1rem">
+      <div><div style="font-size:28px;font-weight:800;color:var(--blue)">4 610</div><div style="font-size:12px;color:var(--text-muted)">Points obtenus</div></div>
+      <div><div style="font-size:28px;font-weight:800;color:var(--blue)">43</div><div style="font-size:12px;color:var(--text-muted)">Challenges valides</div></div>
+      <div><div style="font-size:28px;font-weight:800;color:var(--blue)">39,9%</div><div style="font-size:12px;color:var(--text-muted)">Taux de validation</div></div>
+    </div>
+    <p style="font-size:13px;color:var(--text-muted);line-height:1.7">Hossam · Eleve BTS 1SIO · Lycee Georges Brassens</p>
+  </div>
+</div>
+
+<!-- MODAL PIX -->
+<div class="modal-overlay" id="modal-pix" onclick="closeModalOutside(event,'modal-pix')">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div><div class="modal-title">Certification PIX</div><div class="modal-subtitle">GIP PIX · 21 fevrier 2025 · Lycee Claude Lebois</div></div>
+      <button class="modal-close" onclick="closeModal('modal-pix')">x</button>
+    </div>
+    <div style="background:linear-gradient(135deg,#7c3aed,#4f46e5);border-radius:12px;padding:2rem;color:white;margin-bottom:1rem;text-align:center">
+      <div style="font-size:12px;letter-spacing:0.1em;opacity:0.8;margin-bottom:0.5rem">pix</div>
+      <div style="font-size:48px;font-weight:800;line-height:1">366</div>
+      <div style="font-size:13px;opacity:0.8">/ 895 points</div>
+      <div style="margin-top:0.8rem;background:rgba(255,255,255,0.2);border-radius:8px;padding:5px 14px;display:inline-block;font-size:13px;font-weight:700">Independant 1</div>
+    </div>
+    <div style="font-size:13px;color:var(--text-muted);line-height:1.8">
+      <strong style="color:var(--text-dark)">Hossam ABOUHALI</strong> · ne(e) le 12/07/2007<br>
+      Code de verification : <strong style="color:var(--blue)">P-QHQ3TMRP</strong><br>
+      Verifiable sur app.pix.fr/verification-certificat
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CNIL -->
+<div class="modal-overlay" id="modal-cnil" onclick="closeModalOutside(event,'modal-cnil')">
+  <div class="modal-box" style="max-width:720px">
+    <div class="modal-header">
+      <div><div class="modal-title">Certifications CNIL — RGPD</div><div class="modal-subtitle">L'Atelier RGPD · Commission Nationale de l'Informatique et des Libertes</div></div>
+      <button class="modal-close" onclick="closeModal('modal-cnil')">x</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
+        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 1</div>
+        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Le RGPD et ses notions cles</div>
+        <div style="font-size:12px;color:var(--text-muted)">16 septembre 2025 · <strong style="color:#16a34a">90%</strong></div>
+      </div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
+        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 2</div>
+        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Les principes de la protection des donnees</div>
+        <div style="font-size:12px;color:var(--text-muted)">16 septembre 2025 · <strong style="color:#16a34a">85%</strong></div>
+      </div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
+        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 3</div>
+        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Les responsabilites des acteurs</div>
+        <div style="font-size:12px;color:var(--text-muted)">23 septembre 2025 · <strong style="color:#16a34a">80%</strong></div>
+      </div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
+        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 4</div>
+        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Le DPO et les outils de la conformite</div>
+        <div style="font-size:12px;color:var(--text-muted)">30 septembre 2025 · <strong style="color:#16a34a">84%</strong></div>
+      </div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
+        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 5</div>
+        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Les collectivites territoriales</div>
+        <div style="font-size:12px;color:var(--text-muted)">4 novembre 2025 · <strong style="color:#16a34a">83%</strong></div>
+      </div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
+        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 6</div>
+        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Travail et donnees personnelles</div>
+        <div style="font-size:12px;color:var(--text-muted)">4 novembre 2025 · <strong style="color:#16a34a">84%</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL SECNUM -->
+<div class="modal-overlay" id="modal-secnum" onclick="closeModalOutside(event,'modal-secnum')">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div><div class="modal-title">SecNumademie</div><div class="modal-subtitle">ANSSI · Fait le 16 janvier 2026</div></div>
+      <button class="modal-close" onclick="closeModal('modal-secnum')">x</button>
+    </div>
+    <div style="background:linear-gradient(135deg,#0f4c81,#1d6fa4);border-radius:12px;padding:1.5rem;color:white;margin-bottom:1.2rem;text-align:center">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;margin-bottom:0.3rem">SecNum academie · ANSSI</div>
+      <div style="font-size:15px;font-weight:600;opacity:0.9">Attestation de suivi — Hossam Abouhali</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)">
+        <span style="font-size:13px;font-weight:600;color:var(--text-dark)">Panorama de la SSI</span>
+        <span style="font-size:13px;font-weight:700;color:#16a34a">80%</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)">
+        <span style="font-size:13px;font-weight:600;color:var(--text-dark)">Securite de l'authentification</span>
+        <span style="font-size:13px;font-weight:700;color:#16a34a">82%</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)">
+        <span style="font-size:13px;font-weight:600;color:var(--text-dark)">Securite sur Internet</span>
+        <span style="font-size:13px;font-weight:700;color:#16a34a">90%</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)">
+        <span style="font-size:13px;font-weight:600;color:var(--text-dark)">Securite du poste de travail et nomadisme</span>
+        <span style="font-size:13px;font-weight:700;color:#16a34a">88%</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ══ TABLEAU E5 ══ -->
@@ -765,9 +931,140 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
   </div>
 </div>
 
+<div id="page-cv" class="page">
+  <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
+    <div class="wrapper" style="width:100%">
+      <div class="section-header reveal">
+        <div class="title-line"></div>
+        <h2 class="section-title">Curriculum Vitae</h2>
+        <p class="section-sub">Hossam ABOUHALI — BTS SIO option SISR</p>
+      </div>
+      <!-- CV CARD -->
+      <div class="glass-card reveal" style="max-width:780px;margin:0 auto">
+        <!-- HEADER CV -->
+        <div style="background:var(--blue);color:white;border-radius:12px;padding:2rem;margin-bottom:1.5rem">
+          <div style="font-size:28px;font-weight:800;letter-spacing:-0.02em;margin-bottom:0.2rem">Hossam ABOUHALI</div>
+          <div style="font-size:13px;opacity:0.85;font-style:italic;margin-bottom:1rem">En formation BTS SIO option SISR — Stage du 18 mai au 3 juillet 2026</div>
+          <div style="display:flex;flex-wrap:wrap;gap:1rem;font-size:12px;opacity:0.9">
+            <span>+33 07 65 22 76 65</span>
+            <span>hossam.abouhali@gmail.com</span>
+            <span>Saint-Chamond, France</span>
+            <span>Ne le 12/07/2007</span>
+            <span>Permis B</span>
+          </div>
+        </div>
+
+        <!-- A PROPOS -->
+        <div style="margin-bottom:1.5rem">
+          <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">A propos</div>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.7">Etudiant en premiere annee de BTS Services Informatiques aux Organisations (option SISR), motive et rigoureux, je souhaite developper mes competences en support, systemes et reseaux au sein d'une entreprise dynamique.</p>
+        </div>
+
+        <!-- COMPETENCES -->
+        <div style="margin-bottom:1.5rem">
+          <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Competences</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12.5px;color:var(--text-muted)">
+            <div>· Installation et configuration de postes (Windows 10/11)</div>
+            <div>· Configuration reseau : TCP/IP, DHCP, DNS, VLANs</div>
+            <div>· Administration Active Directory</div>
+            <div>· Virtualisation : VMware, VirtualBox</div>
+            <div>· Linux Debian (services, pare-feu, scripts)</div>
+            <div>· Gestion de parc avec GLPI</div>
+            <div>· Cisco Packet Tracer</div>
+            <div>· Microsoft 365 / Pack Office</div>
+            <div>· Support utilisateur de premier niveau</div>
+            <div>· Maintenance materielle et logicielle</div>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div style="margin-bottom:1.5rem">
+          <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Experiences professionnelles</div>
+          <div style="margin-bottom:1rem">
+            <div style="display:flex;justify-content:space-between;margin-bottom:3px">
+              <span style="font-size:14px;font-weight:700;color:var(--text-dark)">Stage BTS SIO SISR — 2IT Solutions</span>
+              <span style="font-size:11px;color:var(--text-muted);font-style:italic">18 mai – 3 juillet 2026</span>
+            </div>
+            <div style="font-size:12px;color:var(--blue);margin-bottom:5px">Saint-Etienne, Loire</div>
+            <ul style="font-size:12.5px;color:var(--text-muted);padding-left:1.2rem;line-height:1.7">
+              <li>Intervention et remplacement d'un poste telephonique IP Yealink chez un client</li>
+              <li>Configuration d'un routeur Cisco C888 et switch Netgear (recuperation mot de passe ROMMON)</li>
+              <li>Installation d'une VM Debian 12 sous Oracle VirtualBox</li>
+              <li>Decouverte de l'infrastructure reseau : fibre redondante, datacenters, haute disponibilite</li>
+            </ul>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:3px">
+              <span style="font-size:14px;font-weight:700;color:var(--text-dark)">Stage d'observation — Atalian</span>
+              <span style="font-size:11px;color:var(--text-muted);font-style:italic">Janvier 2022</span>
+            </div>
+            <div style="font-size:12px;color:var(--blue);margin-bottom:5px">Saint-Etienne</div>
+            <ul style="font-size:12.5px;color:var(--text-muted);padding-left:1.2rem;line-height:1.7">
+              <li>Decouverte du milieu professionnel industriel</li>
+              <li>Sensibilisation aux regles de securite en environnement industriel</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PROJETS -->
+        <div style="margin-bottom:1.5rem">
+          <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Projets scolaires</div>
+          <ul style="font-size:12.5px;color:var(--text-muted);padding-left:1.2rem;line-height:1.8">
+            <li>Virtualisation de machines avec VMware</li>
+            <li>Mise en place et gestion d'un outil de ticketing avec GLPI</li>
+            <li>Configuration reseau et simulations avec Cisco Packet Tracer</li>
+            <li>Gestion d'utilisateurs et strategies sous Windows Server / Active Directory</li>
+          </ul>
+        </div>
+
+        <!-- FORMATION -->
+        <div style="margin-bottom:1.5rem">
+          <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Formation</div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+            <div>
+              <div style="font-size:14px;font-weight:700;color:var(--text-dark)">BTS SIO — Option SISR</div>
+              <div style="font-size:12px;color:var(--text-muted)">Lycee Georges Brassens · Rive-de-Gier</div>
+            </div>
+            <span style="font-size:11px;color:var(--text-muted);font-style:italic">2025 – 2027</span>
+          </div>
+          <div style="display:flex;justify-content:space-between">
+            <div>
+              <div style="font-size:14px;font-weight:700;color:var(--text-dark)">Baccalaureat STI2D — Option SIN</div>
+              <div style="font-size:12px;color:var(--text-muted)">Cite scolaire Claude Lebois · Saint-Chamond</div>
+            </div>
+            <span style="font-size:11px;color:var(--text-muted);font-style:italic">2023 – 2025</span>
+          </div>
+        </div>
+
+        <!-- LANGUES & CERTS -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Langues</div>
+            <div style="font-size:12.5px;color:var(--text-muted);line-height:1.8">
+              <div>Francais : langue maternelle</div>
+              <div>Anglais : B2</div>
+              <div>Espagnol : B1</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Certifications</div>
+            <div style="font-size:12.5px;color:var(--text-muted);line-height:1.8">
+              <div>Certification PIX (366/895 — Independant 1)</div>
+              <div>Certifications CNIL — RGPD (6 modules)</div>
+              <div>SecNumademie — ANSSI (4 modules)</div>
+              <div>Root-Me (4610 pts · 43 challenges)</div>
+              <div>Permis B</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+
 <footer style="position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid rgba(37,99,235,0.1);font-size:12px;color:var(--text-muted)">
-  © 2026 · Hossam Abouhali · BTS SIO SISR · Lycee Georges Brassens, Rive-de-Gier
-</footer>
 
 <script>
 function showPage(id, linkEl) {
@@ -809,5 +1106,8 @@ async function handleSubmit(e) {
   } catch { document.getElementById('form-error').style.display='block'; btn.textContent='Envoyer le message'; btn.disabled=false; }
 }
 </script>
+<footer style="position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid rgba(37,99,235,0.1);font-size:12px;color:var(--text-muted)">
+  © 2026 · Hossam Abouhali · BTS SIO SISR · Lycee Georges Brassens, Rive-de-Gier
+</footer>
 </body>
 </html>
