@@ -597,8 +597,8 @@ body.dark .source-item { background: rgba(15,23,42,0.6); }
           </div>
           <div class="semaine-body">
             <ul>
-              <li><strong>TP DHCP sous Debian 12 :</strong> deux VMs en Internal Network VirtualBox (serveur + client). Installation isc-dhcp-server, configuration dhcpd.conf (plage 192.168.1.100–200, passerelle, DNS). Reservation d'adresse par MAC pour IP fixe. Verification du processus DORA.</li>
-              <li><strong>TP Active Directory Windows Server 2019 :</strong> installation AD DS, promotion en controleur de domaine (infotech.local). Creation de 3 OUs (Direction, Comptabilite, Informatique), utilisateurs et groupes. GPO Restriction_Bureau sur Comptabilite : desactivation Panneau de configuration, fond d'ecran impose. Validation avec gpupdate /force.</li>
+              <li><strong>DHCP sous Debian 12 :</strong> deux VMs en Internal Network VirtualBox (serveur + client). Installation isc-dhcp-server, configuration dhcpd.conf (plage 192.168.1.100–200, passerelle, DNS). Reservation d'adresse par MAC pour IP fixe. Verification du processus DORA.</li>
+              <li><strong>Active Directory Windows Server 2019 :</strong> installation AD DS, promotion en controleur de domaine (infotech.local). Creation de 3 OUs (Direction, Comptabilite, Informatique), utilisateurs et groupes. GPO Restriction_Bureau sur Comptabilite : desactivation Panneau de configuration, fond d'ecran impose. Validation avec gpupdate /force.</li>
               <li><strong>Intervention reseau client :</strong> 3 zones perdaient la connexion regulierement. Cause : switchs 8 ports defectueux. Remplacement par des modeles 5 ports — connectivite retablie. Panne d'interphonie egalement resolue : remplacement d'un cable Ethernet endommage dans la baie et redemarrage du boitier portail/interphone.</li>
               <li><strong>Configuration de 16 telephones Yealink SIP-T85W.</strong></li>
             </ul>
@@ -614,9 +614,9 @@ body.dark .source-item { background: rgba(15,23,42,0.6); }
           </div>
           <div class="semaine-body">
             <ul>
-              <li><strong>TP securite reseau (Ubuntu) :</strong> configuration UFW — blocage trafic entrant par defaut, autorisation SSH/HTTP/HTTPS, blocage Telnet (port 23). Analyse de trafic avec Wireshark : capture ICMP lors d'un ping vers 8.8.8.8, comparaison SSH (trafic chiffre) vs HTTP (en-tetes visibles en clair).</li>
-              <li><strong>TP Cisco Packet Tracer multi-sites :</strong> topologie entreprise complete avec VLANs par departement, routage inter-VLAN sur switch multicouche, OSPF entre sites, ACL de filtrage, securisation SSH et Port Security sur les switches.</li>
-              <li><strong>TP Linux + Windows Server :</strong> serveur Debian 12 avec DNS (direct + inverse), Apache (2 sites dont un HTTPS avec certificat auto-signe), FTP. Windows Server 2019 en controleur de domaine, 9 utilisateurs, GPO de restriction. Client Windows 10 joint au domaine avec verification des droits.</li>
+              <li><strong>Securite reseau (Ubuntu) :</strong> configuration UFW — blocage trafic entrant par defaut, autorisation SSH/HTTP/HTTPS, blocage Telnet (port 23). Analyse de trafic avec Wireshark : capture ICMP lors d'un ping vers 8.8.8.8, comparaison SSH (trafic chiffre) vs HTTP (en-tetes visibles en clair).</li>
+              <li><strong>Cisco Packet Tracer multi-sites :</strong> topologie entreprise complete avec VLANs par departement, routage inter-VLAN sur switch multicouche, OSPF entre sites, ACL de filtrage, securisation SSH et Port Security sur les switches.</li>
+              <li><strong>Linux + Windows Server :</strong> serveur Debian 12 avec DNS (direct + inverse), Apache (2 sites dont un HTTPS avec certificat auto-signe), FTP. Windows Server 2019 en controleur de domaine, 9 utilisateurs, GPO de restriction. Client Windows 10 joint au domaine avec verification des droits.</li>
               <li><strong>Deploiement VoIP/DECT Yealink :</strong> base W70B et telephone T35W — configuration via interfaces web (URL serveur d'approvisionnement, desactivation verification TLS). Appairage du combine W73H (PIN DECT obtenu du tuteur), mise a jour firmware automatique via la base. Test d'appel W73H vers T35W reussi.</li>
             </ul>
             <div class="task-tags"><span class="stag">UFW</span><span class="stag">Wireshark</span><span class="stag">OSPF</span><span class="stag">ACL</span><span class="stag">Apache HTTPS</span><span class="stag">W70B</span><span class="stag">T35W</span><span class="stag">DECT W73H</span></div>
