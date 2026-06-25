@@ -26,8 +26,6 @@ body { font-family: 'Inter', sans-serif; background: #dbeafe; color: var(--text-
 .orb { position: fixed; border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 0; }
 .orb1 { width: 500px; height: 500px; top: -100px; right: -50px; background: rgba(255,255,255,0.6); }
 .orb2 { width: 350px; height: 350px; bottom: 10%; left: -80px; background: rgba(147,197,253,0.4); }
-
-/* NAV */
 nav {
   position: fixed; top: 1.2rem; left: 50%; transform: translateX(-50%);
   z-index: 100; width: calc(100% - 3rem); max-width: 1100px;
@@ -39,48 +37,23 @@ nav {
 }
 .nav-logo { font-weight: 700; font-size: 16px; color: var(--blue); }
 .nav-links { display: flex; align-items: center; gap: 0; list-style: none; }
-.nav-links a {
-  font-size: 12.5px; font-weight: 500; color: var(--text-dark);
-  text-decoration: none; padding: 6px 11px; border-radius: 8px; transition: all 0.2s;
-}
+.nav-links a { font-size: 12.5px; font-weight: 500; color: var(--text-dark); text-decoration: none; padding: 6px 11px; border-radius: 8px; transition: all 0.2s; }
 .nav-links a:hover, .nav-links a.current { color: var(--blue); background: rgba(37,99,235,0.08); }
 .nav-links a.current { text-decoration: underline; text-underline-offset: 3px; }
 .nav-right { display: flex; align-items: center; gap: 8px; }
-.btn-linkedin {
-  font-size: 12px; font-weight: 500; color: var(--blue);
-  background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2);
-  border-radius: 8px; padding: 6px 14px; text-decoration: none; transition: all 0.2s;
-}
+.btn-linkedin { font-size: 12px; font-weight: 500; color: var(--blue); background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2); border-radius: 8px; padding: 6px 14px; text-decoration: none; transition: all 0.2s; }
 .btn-linkedin:hover { background: var(--blue); color: white; }
-.btn-theme {
-  width: 34px; height: 34px; border-radius: 8px; background: rgba(37,99,235,0.08);
-  border: 1px solid rgba(37,99,235,0.15); display: flex; align-items: center;
-  justify-content: center; cursor: pointer; font-size: 15px; color: var(--blue); transition: all 0.2s;
-}
-
-/* WRAPPER */
+.btn-theme { width: 34px; height: 34px; border-radius: 8px; background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.15); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 15px; color: var(--blue); transition: all 0.2s; }
 .wrapper { position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
-
-/* PAGE */
 .page { display: none; }
 .page.active { display: block; }
 section { min-height: 100vh; display: flex; align-items: center; padding: 7rem 0 4rem; }
-
-/* SECTION TITLE */
 .section-header { margin-bottom: 2.5rem; }
 .title-line { display: inline-block; width: 40px; height: 3px; background: var(--blue); border-radius: 2px; margin-bottom: 0.8rem; }
 .section-title { font-size: 36px; font-weight: 800; color: var(--text-dark); letter-spacing: -0.02em; margin-bottom: 0.4rem; }
 .section-sub { font-size: 14px; color: var(--text-muted); }
-
-/* GLASS CARD */
-.glass-card {
-  background: var(--glass); backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border); border-radius: 20px;
-  box-shadow: 0 8px 32px var(--shadow); padding: 2rem; transition: transform 0.2s, box-shadow 0.2s;
-}
+.glass-card { background: var(--glass); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; box-shadow: 0 8px 32px var(--shadow); padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; }
 .glass-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px var(--shadow); }
-
-/* HERO */
 .hero-tag { font-size: 13px; font-weight: 600; color: var(--blue); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
 .hero-name { font-size: clamp(44px,7vw,72px); font-weight: 800; color: var(--text-dark); letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.6rem; }
 .hero-role { font-size: 16px; font-weight: 600; color: var(--blue); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1rem; }
@@ -91,22 +64,16 @@ section { min-height: 100vh; display: flex; align-items: center; padding: 7rem 0
 .btn-outline:hover { background: rgba(255,255,255,0.8); transform: translateY(-1px); }
 .btn-primary { background: var(--blue); color: white; box-shadow: 0 4px 16px rgba(37,99,235,0.35); }
 .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
-
-/* INFO ROWS */
 .info-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid rgba(37,99,235,0.08); font-size: 13.5px; }
 .info-row:last-child { border-bottom: none; }
 .info-label { font-weight: 600; color: var(--text-dark); min-width: 90px; }
 .info-val { color: var(--text-muted); }
-
-/* SKILLS */
 .skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
 .skill-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); box-shadow: 0 4px 20px var(--shadow); transition: all 0.25s; }
 .skill-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.7); }
 .skill-card-title { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
 .skill-card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 .stag { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 6px; background: rgba(37,99,235,0.08); color: var(--blue); border: 1px solid rgba(37,99,235,0.15); }
-
-/* PARCOURS */
 .parcours-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
 .parcours-col-title { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 800; color: var(--text-dark); margin-bottom: 1.8rem; }
 .p-timeline { position: relative; padding-left: 22px; }
@@ -120,21 +87,28 @@ section { min-height: 100vh; display: flex; align-items: center; padding: 7rem 0
 .p-card-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; margin: 0.5rem 0 0.8rem; }
 .btn-savoir { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: var(--blue); background: rgba(37,99,235,0.07); border: 1px solid rgba(37,99,235,0.2); padding: 5px 13px; border-radius: 8px; cursor: pointer; transition: all 0.2s; font-family: 'Inter',sans-serif; }
 .btn-savoir:hover { background: var(--blue); color: white; }
-
-/* CERTS */
-.certs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+/* RECHERCHE */
+.recherche-hero { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); border-radius: 20px; padding: 2.5rem; color: white; margin-bottom: 2rem; }
+.recherche-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-bottom: 1.5rem; }
+.recherche-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); box-shadow: 0 4px 20px var(--shadow); transition: all 0.25s; }
+.recherche-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.72); }
+.recherche-card-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(37,99,235,0.1); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 0.9rem; }
+.recherche-card-title { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
+.recherche-card-text { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; }
+.task-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 0.8rem; }
+.sources-list { display: flex; flex-direction: column; gap: 8px; }
+.source-item { display: flex; align-items: center; gap: 12px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 12px; padding: 0.9rem 1.2rem; backdrop-filter: blur(16px); transition: all 0.2s; }
+.source-item:hover { background: rgba(255,255,255,0.75); transform: translateX(4px); }
+.source-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+.source-name { font-size: 13px; font-weight: 600; color: var(--text-dark); }
+.source-desc { font-size: 11.5px; color: var(--text-muted); margin-top: 1px; }
+.source-freq { font-size: 11px; color: var(--blue); font-weight: 600; margin-left: auto; white-space: nowrap; }
+/* CERTIFICATIONS */
 .cert-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); text-align: center; box-shadow: 0 4px 20px var(--shadow); transition: all 0.25s; }
 .cert-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.75); }
 .cert-badge { width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, var(--blue-light), var(--blue-dark)); display: flex; align-items: center; justify-content: center; font-size: 22px; margin: 0 auto 0.9rem; font-weight: 800; color: white; }
 .cert-name { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.3rem; }
 .cert-org { font-size: 12px; color: var(--text-muted); }
-
-/* VEILLE */
-.veille-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 1.5rem; backdrop-filter: blur(16px); box-shadow: 0 4px 20px var(--shadow); transition: all 0.25s; }
-.veille-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.72); }
-.veille-title { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 0.5rem; }
-.veille-text { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; }
-
 /* TABLEAU E5 */
 .e5-table-wrap { overflow-x: auto; border-radius: 16px; box-shadow: 0 8px 32px var(--shadow); }
 .e5-table { width: 100%; border-collapse: collapse; background: rgba(255,255,255,0.7); backdrop-filter: blur(16px); font-size: 12px; }
@@ -151,8 +125,7 @@ section { min-height: 100vh; display: flex; align-items: center; padding: 7rem 0
 .e5-realisation { font-weight: 500; }
 .e5-info { background: rgba(37,99,235,0.05); border: 1px solid rgba(37,99,235,0.15); border-radius: 12px; padding: 1rem 1.2rem; margin-bottom: 1.5rem; font-size: 13px; color: var(--text-muted); }
 .e5-info strong { color: var(--text-dark); }
-
-/* MODAL */
+/* MODALS */
 .modal-overlay { position: fixed; inset: 0; z-index: 500; background: rgba(15,30,60,0.45); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.25s; padding: 2rem; }
 .modal-overlay.open { opacity: 1; pointer-events: all; }
 .modal-box { background: rgba(255,255,255,0.95); backdrop-filter: blur(24px); border: 1px solid var(--glass-border); border-radius: 22px; padding: 2.2rem; max-width: 680px; width: 100%; max-height: 85vh; overflow-y: auto; box-shadow: 0 24px 60px rgba(37,99,235,0.18); transform: translateY(20px); transition: transform 0.3s; }
@@ -162,7 +135,6 @@ section { min-height: 100vh; display: flex; align-items: center; padding: 7rem 0
 .modal-subtitle { font-size: 13px; color: var(--blue); font-weight: 600; margin-top: 3px; }
 .modal-close { width: 32px; height: 32px; border-radius: 8px; background: rgba(37,99,235,0.08); border: none; cursor: pointer; font-size: 16px; color: var(--text-muted); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
 .modal-close:hover { background: rgba(37,99,235,0.18); }
-
 /* SEMAINES */
 .semaines-list { display: flex; flex-direction: column; gap: 10px; }
 .semaine-item { border: 1px solid rgba(37,99,235,0.15); border-radius: 14px; overflow: hidden; background: rgba(255,255,255,0.6); transition: box-shadow 0.2s; }
@@ -176,11 +148,10 @@ section { min-height: 100vh; display: flex; align-items: center; padding: 7rem 0
 .s-arrow { font-size: 12px; color: var(--text-muted); transition: transform 0.2s; }
 .semaine-item.open .s-arrow { transform: rotate(180deg); }
 .semaine-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.2s; padding: 0 1.2rem; font-size: 13px; color: var(--text-muted); line-height: 1.75; }
-.semaine-item.open .semaine-body { max-height: 1200px; padding: 0.9rem 1.2rem 1rem; border-top: 1px solid rgba(37,99,235,0.1); }
+.semaine-item.open .semaine-body { max-height: 1800px; padding: 0.9rem 1.2rem 1rem; border-top: 1px solid rgba(37,99,235,0.1); }
 .semaine-body ul { padding-left: 1.2rem; }
-.semaine-body li { margin-bottom: 4px; }
+.semaine-body li { margin-bottom: 6px; }
 .semaine-body strong { color: var(--text-dark); }
-
 /* CONTACT */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; }
 .contact-info { display: flex; flex-direction: column; gap: 12px; }
@@ -198,15 +169,13 @@ section { min-height: 100vh; display: flex; align-items: center; padding: 7rem 0
 .form-group textarea { height: 90px; }
 .btn-send { width: 100%; background: var(--blue); color: white; border: none; border-radius: 10px; padding: 12px; font-size: 14px; font-weight: 600; font-family: 'Inter',sans-serif; cursor: pointer; transition: all 0.2s; box-shadow: 0 4px 16px rgba(37,99,235,0.35); }
 .btn-send:hover { background: var(--blue-dark); transform: translateY(-1px); }
-
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
-
-/* DARK MODE */
+/* DARK */
 body.dark { --glass: rgba(15,23,42,0.6); --glass-border: rgba(255,255,255,0.08); --text-dark: #f1f5f9; --text-muted: #94a3b8; --shadow: rgba(0,0,0,0.3); background: #0f172a; }
 body.dark .bg-gradient { background: radial-gradient(ellipse 80% 60% at 80% 20%, rgba(30,58,138,0.5) 0%, transparent 60%), linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%); }
 body.dark .e5-table { background: rgba(15,23,42,0.8); }
@@ -216,10 +185,11 @@ body.dark .e5-check { background: rgba(15,23,42,0.8); }
 body.dark .semaine-item { background: rgba(255,255,255,0.04); }
 body.dark .modal-box { background: rgba(15,23,50,0.97); }
 body.dark .form-group input, body.dark .form-group textarea { background: rgba(255,255,255,0.05); color: #f1f5f9; }
-
+body.dark .recherche-card { background: rgba(15,23,42,0.6); }
+body.dark .source-item { background: rgba(15,23,42,0.6); }
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .skills-grid, .certs-grid { grid-template-columns: 1fr 1fr; }
+  .skills-grid, .recherche-grid { grid-template-columns: 1fr 1fr; }
   .parcours-cols, .contact-grid { grid-template-columns: 1fr; }
 }
 </style>
@@ -229,13 +199,12 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
 <div class="orb orb1"></div>
 <div class="orb orb2"></div>
 
-<!-- NAV -->
 <nav>
   <span class="nav-logo">H.ABOUHALI</span>
   <ul class="nav-links">
     <li><a href="#" data-page="accueil" class="current" onclick="showPage('accueil',this);return false">Profil</a></li>
     <li><a href="#" data-page="competences" onclick="showPage('competences',this);return false">Competences</a></li>
-    <li><a href="#" data-page="veille" onclick="showPage('veille',this);return false">Veille</a></li>
+    <li><a href="#" data-page="recherche" onclick="showPage('recherche',this);return false">Recherche</a></li>
     <li><a href="#" data-page="formation" onclick="showPage('formation',this);return false">Formation</a></li>
     <li><a href="#" data-page="certifications" onclick="showPage('certifications',this);return false">Certifications</a></li>
     <li><a href="#" data-page="tableau" onclick="showPage('tableau',this);return false">Tableau E5</a></li>
@@ -249,7 +218,7 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
   </div>
 </nav>
 
-<!-- ══ PROFIL ══ -->
+<!-- PROFIL -->
 <div id="page-accueil" class="page active">
   <section style="min-height:100vh;display:flex;align-items:center;padding-top:6rem">
     <div class="wrapper" style="width:100%">
@@ -280,7 +249,7 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
   </section>
 </div>
 
-<!-- ══ COMPETENCES ══ -->
+<!-- COMPETENCES -->
 <div id="page-competences" class="page">
   <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
@@ -290,79 +259,87 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
         <p class="section-sub">Competences techniques acquises en formation et en stage</p>
       </div>
       <div class="skills-grid reveal">
-        <div class="skill-card">
-          <div class="skill-card-title">Reseau & Protocoles</div>
-          <div class="skill-card-tags"><span class="stag">TCP/IP</span><span class="stag">DHCP</span><span class="stag">DNS</span><span class="stag">VLAN</span><span class="stag">Routage</span></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card-title">Windows Server</div>
-          <div class="skill-card-tags"><span class="stag">Active Directory</span><span class="stag">GPO</span><span class="stag">DNS</span><span class="stag">DHCP</span></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card-title">Virtualisation</div>
-          <div class="skill-card-tags"><span class="stag">VMware</span><span class="stag">VirtualBox</span><span class="stag">Packet Tracer</span></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card-title">Linux Debian</div>
-          <div class="skill-card-tags"><span class="stag">IPTables</span><span class="stag">Apache2</span><span class="stag">MariaDB</span><span class="stag">SSH</span></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card-title">Ticketing & ITSM</div>
-          <div class="skill-card-tags"><span class="stag">GLPI</span><span class="stag">LDAP</span><span class="stag">Support N1</span></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card-title">Securite</div>
-          <div class="skill-card-tags"><span class="stag">Pare-feu</span><span class="stag">NAT/PAT</span><span class="stag">ACL</span><span class="stag">Root-Me</span></div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-card-title">Bureautique & OS</div>
-          <div class="skill-card-tags"><span class="stag">Windows 10/11</span><span class="stag">Microsoft 365</span><span class="stag">Pack Office</span></div>
-        </div>
+        <div class="skill-card"><div class="skill-card-title">Reseau & Protocoles</div><div class="skill-card-tags"><span class="stag">TCP/IP</span><span class="stag">DHCP</span><span class="stag">DNS</span><span class="stag">VLAN</span><span class="stag">Routage</span><span class="stag">OSPF</span></div></div>
+        <div class="skill-card"><div class="skill-card-title">Windows Server</div><div class="skill-card-tags"><span class="stag">Active Directory</span><span class="stag">GPO</span><span class="stag">DNS</span><span class="stag">DHCP</span></div></div>
+        <div class="skill-card"><div class="skill-card-title">Virtualisation</div><div class="skill-card-tags"><span class="stag">VMware</span><span class="stag">VirtualBox</span><span class="stag">Packet Tracer</span></div></div>
+        <div class="skill-card"><div class="skill-card-title">Linux Debian</div><div class="skill-card-tags"><span class="stag">UFW/IPTables</span><span class="stag">Apache2</span><span class="stag">MariaDB</span><span class="stag">SSH</span><span class="stag">FTP</span></div></div>
+        <div class="skill-card"><div class="skill-card-title">Ticketing & ITSM</div><div class="skill-card-tags"><span class="stag">GLPI</span><span class="stag">LDAP</span><span class="stag">Support N1</span></div></div>
+        <div class="skill-card"><div class="skill-card-title">Securite</div><div class="skill-card-tags"><span class="stag">Pare-feu</span><span class="stag">NAT/PAT</span><span class="stag">ACL</span><span class="stag">Wireshark</span></div></div>
+        <div class="skill-card"><div class="skill-card-title">Telephonie IP</div><div class="skill-card-tags"><span class="stag">Yealink SIP</span><span class="stag">DECT</span><span class="stag">VoIP</span><span class="stag">Provisioning</span></div></div>
+        <div class="skill-card"><div class="skill-card-title">Firewall & Routeurs</div><div class="skill-card-tags"><span class="stag">Zyxel USG</span><span class="stag">Cisco</span><span class="stag">Netgear</span><span class="stag">4G LTE</span></div></div>
+        <div class="skill-card"><div class="skill-card-title">Bureautique & OS</div><div class="skill-card-tags"><span class="stag">Windows 10/11</span><span class="stag">Microsoft 365</span><span class="stag">Pack Office</span></div></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ══ VEILLE ══ -->
-<div id="page-veille" class="page">
+<!-- RECHERCHE TECHNOLOGIQUE -->
+<div id="page-recherche" class="page">
   <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
       <div class="section-header reveal">
         <div class="title-line"></div>
-        <h2 class="section-title">Veille Technologique</h2>
-        <p class="section-sub">Sujet : La VAR dans le football</p>
+        <h2 class="section-title">Recherche Technologique</h2>
+        <p class="section-sub">Sujet : La telephonie sur IP (VoIP) en entreprise</p>
       </div>
-      <div class="glass-card reveal" style="margin-bottom:1.8rem">
-        <div style="font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem">BTS SIO SISR — Sujet de veille</div>
-        <div style="font-size:20px;font-weight:800;color:var(--text-dark);margin-bottom:0.5rem">La VAR dans le football</div>
-        <p style="font-size:13.5px;color:var(--text-muted);line-height:1.7">La Video Assistant Referee (VAR) est bien plus qu'une technologie sportive : c'est une infrastructure IT critique qui mobilise des competences directement liees au BTS SIO SISR — reseaux haute disponibilite, serveurs temps reel et securite des systemes.</p>
+
+      <div class="recherche-hero reveal">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:0.75;margin-bottom:0.5rem">BTS SIO SISR — Sujet de recherche</div>
+        <div style="font-size:24px;font-weight:800;margin-bottom:0.6rem">La telephonie sur IP (VoIP)</div>
+        <p style="font-size:14px;opacity:0.85;line-height:1.65">Au cours de mon stage chez 2iT Solutions, j'ai configure et deploye de nombreux equipements VoIP : telephones SIP Yealink, bases DECT, firewalls avec VLANs dedies. Ce sujet illustre directement comment les reseaux et la telephonie convergent dans un environnement professionnel moderne.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem">
-        <div class="veille-card reveal">
-          <div class="veille-title">Infrastructure reseau</div>
-          <p class="veille-text">La VAR repose sur un reseau fibre optique dedie a tres haut debit dans chaque stade. Entre 8 et 33 cameras 4K transmettent leurs flux vers une salle de controle avec une latence inferieure a 100 ms. Les liens sont doubles, les switches redondants — exactement les notions de QoS, VLAN et haute disponibilite etudiees en SISR.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem"><span class="stag">Fibre optique</span><span class="stag">QoS</span><span class="stag">VLAN</span><span class="stag">Redondance</span></div>
+
+      <div class="recherche-grid reveal">
+        <div class="recherche-card">
+          <div class="recherche-card-icon">📡</div>
+          <div class="recherche-card-title">Qu'est-ce que la VoIP ?</div>
+          <p class="recherche-card-text">La Voice over IP (VoIP) transporte la voix sous forme de paquets IP en remplacement des lignes analogiques. Le protocole SIP (Session Initiation Protocol) est le standard pour etablir, maintenir et terminer les appels. L'audio est encode en temps reel via le protocole RTP.</p>
+          <div class="task-tags"><span class="stag">SIP</span><span class="stag">RTP</span><span class="stag">H.323</span></div>
         </div>
-        <div class="veille-card reveal reveal-delay-1">
-          <div class="veille-title">Serveurs & stockage temps reel</div>
-          <p class="veille-text">Les flux video sont captures et stockes instantanement sur des serveurs locaux au stade. La technologie SAOT genere 500 donnees par seconde par ballon, traitees sur des baies de stockage NVMe a faible latence — une architecture que les techniciens SISR administrent au quotidien.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem"><span class="stag">Serveurs</span><span class="stag">NVMe</span><span class="stag">Temps reel</span><span class="stag">SAOT</span></div>
+        <div class="recherche-card">
+          <div class="recherche-card-icon">🔧</div>
+          <div class="recherche-card-title">Infrastructure reseau necessaire</div>
+          <p class="recherche-card-text">La VoIP est sensible a la latence et aux pertes de paquets. Un VLAN dedie a la voix est indispensable pour isoler et prioriser ce trafic (QoS). Le firewall doit autoriser les flux SIP et RTP tout en les filtrant — c'est exactement ce que j'ai fait sur les Zyxel USG en stage.</p>
+          <div class="task-tags"><span class="stag">VLAN voix</span><span class="stag">QoS</span><span class="stag">Firewall</span></div>
         </div>
-        <div class="veille-card reveal reveal-delay-2">
-          <div class="veille-title">Securite & cloisonnement</div>
-          <p class="veille-text">Les systemes VAR sont isoles sur des reseaux prives inaccessibles depuis Internet. Les acces sont controles par authentification forte, les enregistrements horodates et chiffres pour garantir l'integrite des decisions arbitrales.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:0.9rem"><span class="stag">Reseau prive</span><span class="stag">Chiffrement</span><span class="stag">Authentification</span></div>
+        <div class="recherche-card">
+          <div class="recherche-card-icon">☎️</div>
+          <div class="recherche-card-title">Provisionnement centralise</div>
+          <p class="recherche-card-text">Les telephones IP modernes (Yealink T35W, T85W) se configurent via un serveur d'approvisionnement. L'appareil recupere sa configuration au demarrage : compte SIP, serveur, parametres reseau. Cela permet de deployer des dizaines de postes rapidement sans intervention manuelle sur chacun.</p>
+          <div class="task-tags"><span class="stag">Yealink</span><span class="stag">Provisioning</span><span class="stag">SIP account</span></div>
         </div>
-        <div class="veille-card reveal reveal-delay-3" style="background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2)">
-          <div class="veille-title">Lien avec le BTS SIO SISR</div>
-          <p class="veille-text"><strong>Reseaux :</strong> TCP/IP, VLAN, QoS, fibre, redondance<br><strong>Systemes :</strong> administration serveurs, Windows / Linux<br><strong>Securite :</strong> cloisonnement reseau, chiffrement, acces<br><strong>Disponibilite :</strong> tolerance aux pannes, PRA, supervision</p>
+        <div class="recherche-card">
+          <div class="recherche-card-icon">📶</div>
+          <div class="recherche-card-title">DECT IP : la mobilite en entreprise</div>
+          <p class="recherche-card-text">Le DECT IP (base W70B + combines W73H) etend la VoIP sans fil. La base s'enregistre sur le serveur SIP et les combines s'appairent a la base via un code PIN DECT. Le firmware se met a jour automatiquement via la base — ce que j'ai realise et teste en semaine 5 de stage.</p>
+          <div class="task-tags"><span class="stag">W70B</span><span class="stag">W73H</span><span class="stag">DECT</span></div>
         </div>
+        <div class="recherche-card">
+          <div class="recherche-card-icon">🔒</div>
+          <div class="recherche-card-title">Securite des flux VoIP</div>
+          <p class="recherche-card-text">Le trafic SIP peut etre intercepte ou usurpe (SIP spoofing, VLAN hopping). Les bonnes pratiques : utiliser TLS pour la signalisation, SRTP pour le chiffrement de la voix, cloisonner le VLAN voix. En stage, j'ai desactive la verification TLS pour les certificats auto-signes du serveur client.</p>
+          <div class="task-tags"><span class="stag">TLS</span><span class="stag">SRTP</span><span class="stag">SIP spoofing</span></div>
+        </div>
+        <div class="recherche-card" style="background:rgba(37,99,235,0.05);border-color:rgba(37,99,235,0.2)">
+          <div class="recherche-card-icon">🎓</div>
+          <div class="recherche-card-title">Lien avec le BTS SIO SISR</div>
+          <p class="recherche-card-text"><strong>Reseaux :</strong> VLAN, QoS, TCP/IP, SIP/RTP<br><strong>Systemes :</strong> serveur d'approvisionnement, administration a distance<br><strong>Securite :</strong> chiffrement, cloisonnement, firewall<br><strong>Terrain :</strong> deploiements reels chez des clients 2iT Solutions</p>
+        </div>
+      </div>
+
+      <div style="font-size:14px;font-weight:700;color:var(--text-dark);margin-bottom:1rem">Sources consultees</div>
+      <div class="sources-list reveal">
+        <div class="source-item"><div class="source-dot"></div><div><div class="source-name">Yealink Support Center</div><div class="source-desc">Documentation officielle des equipements SIP et DECT, guides de configuration</div></div><span class="source-freq">Regulier</span></div>
+        <div class="source-item"><div class="source-dot"></div><div><div class="source-name">RFC 3261 — SIP (IETF)</div><div class="source-desc">Standard officiel du protocole SIP, base de toute telephonie IP moderne</div></div><span class="source-freq">Reference</span></div>
+        <div class="source-item"><div class="source-dot"></div><div><div class="source-name">Zyxel Knowledge Base</div><div class="source-desc">Configuration des firewalls USG, regles NAT pour flux SIP, VLAN voix</div></div><span class="source-freq">Regulier</span></div>
+        <div class="source-item"><div class="source-dot"></div><div><div class="source-name">OpenClassrooms / IT-Connect</div><div class="source-desc">Articles pedagogiques sur la VoIP, la QoS et la securite reseau</div></div><span class="source-freq">Ponctuel</span></div>
+        <div class="source-item"><div class="source-dot"></div><div><div class="source-name">Wireshark (captures SIP/RTP)</div><div class="source-desc">Analyse pratique des trames lors des deploiements en stage</div></div><span class="source-freq">Terrain</span></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ══ FORMATION ══ -->
+<!-- FORMATION -->
 <div id="page-formation" class="page">
   <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
@@ -414,206 +391,84 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
   </section>
 </div>
 
-<!-- ══ CERTIFICATIONS ══ -->
+<!-- CERTIFICATIONS -->
 <div id="page-certifications" class="page">
   <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
       <div class="section-header reveal">
         <div class="title-line"></div>
         <h2 class="section-title">Certifications</h2>
-        <p class="section-sub">Competences certifiees — cliquez sur une certification pour voir l'attestation</p>
+        <p class="section-sub">Competences certifiees — cliquez pour voir l'attestation</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem" class="reveal">
-
-        <!-- ROOT-ME -->
         <div class="cert-card" onclick="openModal('modal-rootme')" style="cursor:pointer;text-align:left;padding:1.8rem">
-          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
-            <div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#1a1a2e,#16213e)">R</div>
-            <div>
-              <div class="cert-name">Root-Me</div>
-              <div class="cert-org">Challenges de cybersecurite</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:1.5rem;margin-bottom:0.8rem">
-            <div><div style="font-size:22px;font-weight:800;color:var(--blue)">4 610</div><div style="font-size:11px;color:var(--text-muted)">Points obtenus</div></div>
-            <div><div style="font-size:22px;font-weight:800;color:var(--blue)">43</div><div style="font-size:11px;color:var(--text-muted)">Challenges valides</div></div>
-            <div><div style="font-size:22px;font-weight:800;color:var(--blue)">39,9%</div><div style="font-size:11px;color:var(--text-muted)">Taux de validation</div></div>
-          </div>
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem"><div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#1a1a2e,#16213e)">R</div><div><div class="cert-name">Root-Me</div><div class="cert-org">Challenges de cybersecurite</div></div></div>
+          <div style="display:flex;gap:1.5rem;margin-bottom:0.8rem"><div><div style="font-size:22px;font-weight:800;color:var(--blue)">4 610</div><div style="font-size:11px;color:var(--text-muted)">Points obtenus</div></div><div><div style="font-size:22px;font-weight:800;color:var(--blue)">43</div><div style="font-size:11px;color:var(--text-muted)">Challenges valides</div></div><div><div style="font-size:22px;font-weight:800;color:var(--blue)">39,9%</div><div style="font-size:11px;color:var(--text-muted)">Taux de validation</div></div></div>
           <div style="font-size:11px;font-weight:600;color:var(--blue)">Voir l'attestation →</div>
         </div>
-
-        <!-- PIX -->
         <div class="cert-card" onclick="openModal('modal-pix')" style="cursor:pointer;text-align:left;padding:1.8rem">
-          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
-            <div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#7c3aed,#4f46e5)">P</div>
-            <div>
-              <div class="cert-name">Certification PIX</div>
-              <div class="cert-org">GIP PIX · 21 fevrier 2025</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:1.5rem;margin-bottom:0.8rem">
-            <div><div style="font-size:22px;font-weight:800;color:var(--blue)">366</div><div style="font-size:11px;color:var(--text-muted)">Score / 895</div></div>
-            <div><div style="font-size:14px;font-weight:700;color:#7c3aed;margin-top:4px">Independant 1</div><div style="font-size:11px;color:var(--text-muted)">Niveau global</div></div>
-          </div>
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem"><div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#7c3aed,#4f46e5)">P</div><div><div class="cert-name">Certification PIX</div><div class="cert-org">GIP PIX · 21 fevrier 2025</div></div></div>
+          <div style="display:flex;gap:1.5rem;margin-bottom:0.8rem"><div><div style="font-size:22px;font-weight:800;color:var(--blue)">366</div><div style="font-size:11px;color:var(--text-muted)">Score / 895</div></div><div><div style="font-size:14px;font-weight:700;color:#7c3aed;margin-top:4px">Independant 1</div><div style="font-size:11px;color:var(--text-muted)">Niveau global</div></div></div>
           <div style="font-size:11px;font-weight:600;color:var(--blue)">Voir l'attestation →</div>
         </div>
-
-        <!-- CNIL -->
         <div class="cert-card" onclick="openModal('modal-cnil')" style="cursor:pointer;text-align:left;padding:1.8rem">
-          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
-            <div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#0369a1,#0284c7)">C</div>
-            <div>
-              <div class="cert-name">Certifications CNIL — RGPD</div>
-              <div class="cert-org">CNIL · L'Atelier RGPD · 2025</div>
-            </div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.8rem">
-            <span class="stag">Module 1 · 90%</span>
-            <span class="stag">Module 2 · 85%</span>
-            <span class="stag">Module 3 · 80%</span>
-            <span class="stag">Module 4 · 84%</span>
-            <span class="stag">Module 5 · 83%</span>
-            <span class="stag">Module 6 · 84%</span>
-          </div>
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem"><div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#0369a1,#0284c7)">C</div><div><div class="cert-name">Certifications CNIL — RGPD</div><div class="cert-org">CNIL · L'Atelier RGPD · 2025</div></div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.8rem"><span class="stag">Module 1 · 90%</span><span class="stag">Module 2 · 85%</span><span class="stag">Module 3 · 80%</span><span class="stag">Module 4 · 84%</span><span class="stag">Module 5 · 83%</span><span class="stag">Module 6 · 84%</span></div>
           <div style="font-size:11px;font-weight:600;color:var(--blue)">Voir les attestations →</div>
         </div>
-
-        <!-- SECNUM -->
         <div class="cert-card" onclick="openModal('modal-secnum')" style="cursor:pointer;text-align:left;padding:1.8rem">
-          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
-            <div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#0f4c81,#1d6fa4)">S</div>
-            <div>
-              <div class="cert-name">SecNumademie</div>
-              <div class="cert-org">ANSSI · 16 janvier 2026</div>
-            </div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.8rem">
-            <span class="stag">Panorama SSI · 80%</span>
-            <span class="stag">Authentification · 82%</span>
-            <span class="stag">Securite Internet · 90%</span>
-            <span class="stag">Poste de travail · 88%</span>
-          </div>
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem"><div class="cert-badge" style="flex-shrink:0;background:linear-gradient(135deg,#0f4c81,#1d6fa4)">S</div><div><div class="cert-name">SecNumademie</div><div class="cert-org">ANSSI · 16 janvier 2026</div></div></div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.8rem"><span class="stag">Panorama SSI · 80%</span><span class="stag">Authentification · 82%</span><span class="stag">Securite Internet · 90%</span><span class="stag">Poste de travail · 88%</span></div>
           <div style="font-size:11px;font-weight:600;color:var(--blue)">Voir l'attestation →</div>
         </div>
-
       </div>
     </div>
   </section>
 </div>
 
-<!-- MODAL ROOT-ME -->
+<!-- MODALS CERTIFICATIONS -->
 <div class="modal-overlay" id="modal-rootme" onclick="closeModalOutside(event,'modal-rootme')">
   <div class="modal-box">
-    <div class="modal-header">
-      <div><div class="modal-title">Root-Me</div><div class="modal-subtitle">Plateforme de challenges cybersecurite</div></div>
-      <button class="modal-close" onclick="closeModal('modal-rootme')">x</button>
-    </div>
+    <div class="modal-header"><div><div class="modal-title">Root-Me</div><div class="modal-subtitle">Plateforme de challenges cybersecurite</div></div><button class="modal-close" onclick="closeModal('modal-rootme')">x</button></div>
     <img src="https://hossam4242.github.io/hossam-abouhali-portfolio.github.io/rootme.png" alt="Root-Me" style="width:100%;border-radius:12px;margin-bottom:1rem" onerror="this.style.display='none'">
-    <div style="display:flex;gap:2rem;padding:1rem;background:rgba(37,99,235,0.05);border-radius:12px;margin-bottom:1rem">
-      <div><div style="font-size:28px;font-weight:800;color:var(--blue)">4 610</div><div style="font-size:12px;color:var(--text-muted)">Points obtenus</div></div>
-      <div><div style="font-size:28px;font-weight:800;color:var(--blue)">43</div><div style="font-size:12px;color:var(--text-muted)">Challenges valides</div></div>
-      <div><div style="font-size:28px;font-weight:800;color:var(--blue)">39,9%</div><div style="font-size:12px;color:var(--text-muted)">Taux de validation</div></div>
-    </div>
+    <div style="display:flex;gap:2rem;padding:1rem;background:rgba(37,99,235,0.05);border-radius:12px;margin-bottom:1rem"><div><div style="font-size:28px;font-weight:800;color:var(--blue)">4 610</div><div style="font-size:12px;color:var(--text-muted)">Points obtenus</div></div><div><div style="font-size:28px;font-weight:800;color:var(--blue)">43</div><div style="font-size:12px;color:var(--text-muted)">Challenges valides</div></div><div><div style="font-size:28px;font-weight:800;color:var(--blue)">39,9%</div><div style="font-size:12px;color:var(--text-muted)">Taux de validation</div></div></div>
     <p style="font-size:13px;color:var(--text-muted);line-height:1.7">Hossam · Eleve BTS 1SIO · Lycee Georges Brassens</p>
   </div>
 </div>
-
-<!-- MODAL PIX -->
 <div class="modal-overlay" id="modal-pix" onclick="closeModalOutside(event,'modal-pix')">
   <div class="modal-box">
-    <div class="modal-header">
-      <div><div class="modal-title">Certification PIX</div><div class="modal-subtitle">GIP PIX · 21 fevrier 2025 · Lycee Claude Lebois</div></div>
-      <button class="modal-close" onclick="closeModal('modal-pix')">x</button>
-    </div>
-    <div style="background:linear-gradient(135deg,#7c3aed,#4f46e5);border-radius:12px;padding:2rem;color:white;margin-bottom:1rem;text-align:center">
-      <div style="font-size:12px;letter-spacing:0.1em;opacity:0.8;margin-bottom:0.5rem">pix</div>
-      <div style="font-size:48px;font-weight:800;line-height:1">366</div>
-      <div style="font-size:13px;opacity:0.8">/ 895 points</div>
-      <div style="margin-top:0.8rem;background:rgba(255,255,255,0.2);border-radius:8px;padding:5px 14px;display:inline-block;font-size:13px;font-weight:700">Independant 1</div>
-    </div>
-    <div style="font-size:13px;color:var(--text-muted);line-height:1.8">
-      <strong style="color:var(--text-dark)">Hossam ABOUHALI</strong> · ne(e) le 12/07/2007<br>
-      Code de verification : <strong style="color:var(--blue)">P-QHQ3TMRP</strong><br>
-      Verifiable sur app.pix.fr/verification-certificat
-    </div>
+    <div class="modal-header"><div><div class="modal-title">Certification PIX</div><div class="modal-subtitle">GIP PIX · 21 fevrier 2025</div></div><button class="modal-close" onclick="closeModal('modal-pix')">x</button></div>
+    <div style="background:linear-gradient(135deg,#7c3aed,#4f46e5);border-radius:12px;padding:2rem;color:white;margin-bottom:1rem;text-align:center"><div style="font-size:12px;letter-spacing:0.1em;opacity:0.8;margin-bottom:0.5rem">pix</div><div style="font-size:48px;font-weight:800;line-height:1">366</div><div style="font-size:13px;opacity:0.8">/ 895 points</div><div style="margin-top:0.8rem;background:rgba(255,255,255,0.2);border-radius:8px;padding:5px 14px;display:inline-block;font-size:13px;font-weight:700">Independant 1</div></div>
+    <div style="font-size:13px;color:var(--text-muted);line-height:1.8"><strong style="color:var(--text-dark)">Hossam ABOUHALI</strong> · ne(e) le 12/07/2007<br>Code de verification : <strong style="color:var(--blue)">P-QHQ3TMRP</strong><br>Verifiable sur app.pix.fr/verification-certificat</div>
   </div>
 </div>
-
-<!-- MODAL CNIL -->
 <div class="modal-overlay" id="modal-cnil" onclick="closeModalOutside(event,'modal-cnil')">
   <div class="modal-box" style="max-width:720px">
-    <div class="modal-header">
-      <div><div class="modal-title">Certifications CNIL — RGPD</div><div class="modal-subtitle">L'Atelier RGPD · Commission Nationale de l'Informatique et des Libertes</div></div>
-      <button class="modal-close" onclick="closeModal('modal-cnil')">x</button>
-    </div>
+    <div class="modal-header"><div><div class="modal-title">Certifications CNIL — RGPD</div><div class="modal-subtitle">L'Atelier RGPD · CNIL</div></div><button class="modal-close" onclick="closeModal('modal-cnil')">x</button></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
-        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 1</div>
-        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Le RGPD et ses notions cles</div>
-        <div style="font-size:12px;color:var(--text-muted)">16 septembre 2025 · <strong style="color:#16a34a">90%</strong></div>
-      </div>
-      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
-        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 2</div>
-        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Les principes de la protection des donnees</div>
-        <div style="font-size:12px;color:var(--text-muted)">16 septembre 2025 · <strong style="color:#16a34a">85%</strong></div>
-      </div>
-      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
-        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 3</div>
-        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Les responsabilites des acteurs</div>
-        <div style="font-size:12px;color:var(--text-muted)">23 septembre 2025 · <strong style="color:#16a34a">80%</strong></div>
-      </div>
-      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
-        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 4</div>
-        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Le DPO et les outils de la conformite</div>
-        <div style="font-size:12px;color:var(--text-muted)">30 septembre 2025 · <strong style="color:#16a34a">84%</strong></div>
-      </div>
-      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
-        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 5</div>
-        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Les collectivites territoriales</div>
-        <div style="font-size:12px;color:var(--text-muted)">4 novembre 2025 · <strong style="color:#16a34a">83%</strong></div>
-      </div>
-      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem">
-        <div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 6</div>
-        <div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Travail et donnees personnelles</div>
-        <div style="font-size:12px;color:var(--text-muted)">4 novembre 2025 · <strong style="color:#16a34a">84%</strong></div>
-      </div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 1</div><div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Le RGPD et ses notions cles</div><div style="font-size:12px;color:var(--text-muted)">16 septembre 2025 · <strong style="color:#16a34a">90%</strong></div></div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 2</div><div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Les principes de la protection des donnees</div><div style="font-size:12px;color:var(--text-muted)">16 septembre 2025 · <strong style="color:#16a34a">85%</strong></div></div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 3</div><div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Les responsabilites des acteurs</div><div style="font-size:12px;color:var(--text-muted)">23 septembre 2025 · <strong style="color:#16a34a">80%</strong></div></div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 4</div><div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Le DPO et les outils de la conformite</div><div style="font-size:12px;color:var(--text-muted)">30 septembre 2025 · <strong style="color:#16a34a">84%</strong></div></div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 5</div><div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Les collectivites territoriales</div><div style="font-size:12px;color:var(--text-muted)">4 novembre 2025 · <strong style="color:#16a34a">83%</strong></div></div>
+      <div style="background:rgba(37,99,235,0.05);border:1px solid rgba(37,99,235,0.15);border-radius:10px;padding:1rem"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:0.3rem">MODULE 6</div><div style="font-size:13px;font-weight:600;color:var(--text-dark);margin-bottom:0.2rem">Travail et donnees personnelles</div><div style="font-size:12px;color:var(--text-muted)">4 novembre 2025 · <strong style="color:#16a34a">84%</strong></div></div>
     </div>
   </div>
 </div>
-
-<!-- MODAL SECNUM -->
 <div class="modal-overlay" id="modal-secnum" onclick="closeModalOutside(event,'modal-secnum')">
   <div class="modal-box">
-    <div class="modal-header">
-      <div><div class="modal-title">SecNumademie</div><div class="modal-subtitle">ANSSI · Fait le 16 janvier 2026</div></div>
-      <button class="modal-close" onclick="closeModal('modal-secnum')">x</button>
-    </div>
-    <div style="background:linear-gradient(135deg,#0f4c81,#1d6fa4);border-radius:12px;padding:1.5rem;color:white;margin-bottom:1.2rem;text-align:center">
-      <div style="font-size:13px;font-weight:700;letter-spacing:0.08em;margin-bottom:0.3rem">SecNum academie · ANSSI</div>
-      <div style="font-size:15px;font-weight:600;opacity:0.9">Attestation de suivi — Hossam Abouhali</div>
-    </div>
+    <div class="modal-header"><div><div class="modal-title">SecNumademie</div><div class="modal-subtitle">ANSSI · 16 janvier 2026</div></div><button class="modal-close" onclick="closeModal('modal-secnum')">x</button></div>
+    <div style="background:linear-gradient(135deg,#0f4c81,#1d6fa4);border-radius:12px;padding:1.5rem;color:white;margin-bottom:1.2rem;text-align:center"><div style="font-size:13px;font-weight:700;letter-spacing:0.08em;margin-bottom:0.3rem">SecNum academie · ANSSI</div><div style="font-size:15px;font-weight:600;opacity:0.9">Attestation de suivi — Hossam Abouhali</div></div>
     <div style="display:flex;flex-direction:column;gap:8px">
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)">
-        <span style="font-size:13px;font-weight:600;color:var(--text-dark)">Panorama de la SSI</span>
-        <span style="font-size:13px;font-weight:700;color:#16a34a">80%</span>
-      </div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)">
-        <span style="font-size:13px;font-weight:600;color:var(--text-dark)">Securite de l'authentification</span>
-        <span style="font-size:13px;font-weight:700;color:#16a34a">82%</span>
-      </div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)">
-        <span style="font-size:13px;font-weight:600;color:var(--text-dark)">Securite sur Internet</span>
-        <span style="font-size:13px;font-weight:700;color:#16a34a">90%</span>
-      </div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)">
-        <span style="font-size:13px;font-weight:600;color:var(--text-dark)">Securite du poste de travail et nomadisme</span>
-        <span style="font-size:13px;font-weight:700;color:#16a34a">88%</span>
-      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)"><span style="font-size:13px;font-weight:600;color:var(--text-dark)">Panorama de la SSI</span><span style="font-size:13px;font-weight:700;color:#16a34a">80%</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)"><span style="font-size:13px;font-weight:600;color:var(--text-dark)">Securite de l'authentification</span><span style="font-size:13px;font-weight:700;color:#16a34a">82%</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)"><span style="font-size:13px;font-weight:600;color:var(--text-dark)">Securite sur Internet</span><span style="font-size:13px;font-weight:700;color:#16a34a">90%</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(37,99,235,0.05);border-radius:8px;border:1px solid rgba(37,99,235,0.1)"><span style="font-size:13px;font-weight:600;color:var(--text-dark)">Securite du poste de travail et nomadisme</span><span style="font-size:13px;font-weight:700;color:#16a34a">88%</span></div>
     </div>
   </div>
 </div>
 
-<!-- ══ TABLEAU E5 ══ -->
+<!-- TABLEAU E5 -->
 <div id="page-tableau" class="page">
   <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
@@ -622,10 +477,7 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
         <h2 class="section-title">Tableau de synthese E5</h2>
         <p class="section-sub">Epreuve orale E5 — BTS SIO Session 2026</p>
       </div>
-      <div class="e5-info reveal">
-        <strong>Hossam ABOUHALI</strong> · Option SISR · Lycee Georges Brassens, Rive-de-Gier<br>
-        Portfolio : <strong>https://hossam4242.github.io/hossam-abouhali-portfolio.github.io/</strong>
-      </div>
+      <div class="e5-info reveal"><strong>Hossam ABOUHALI</strong> · Option SISR · Lycee Georges Brassens, Rive-de-Gier<br>Portfolio : <strong>https://hossam4242.github.io/hossam-abouhali-portfolio.github.io/</strong></div>
       <div class="e5-table-wrap reveal">
         <table class="e5-table">
           <thead>
@@ -642,98 +494,21 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
           </thead>
           <tbody>
             <tr class="e5-section-row"><td colspan="8">Realisations en cours de formation</td></tr>
-            <tr>
-              <td class="e5-realisation">Configuration de VLANs et routage sur Cisco Packet Tracer</td>
-              <td class="center e5-period">09/2025 – 11/2025</td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-            </tr>
-            <tr>
-              <td class="e5-realisation">Mise en place d'un Active Directory sous Windows Server (TP)</td>
-              <td class="center e5-period">11/2025 – 12/2025</td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-            </tr>
-            <tr>
-              <td class="e5-realisation">Mise en place d'un serveur DHCP et DNS sous Linux Debian (TP)</td>
-              <td class="center e5-period">01/2026 – 02/2026</td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-            </tr>
-            <tr>
-              <td class="e5-realisation">Veille technologique — La VAR dans le football</td>
-              <td class="center e5-period">10/2025 – 05/2026</td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-            </tr>
-            <tr>
-              <td class="e5-realisation">Portfolio BTS SIO SISR (ce site web)</td>
-              <td class="center e5-period">03/2026 – 05/2026</td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-            </tr>
+            <tr><td class="e5-realisation">Configuration de VLANs et routage sur Cisco Packet Tracer</td><td class="center e5-period">09–11/2025</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td></tr>
+            <tr><td class="e5-realisation">Mise en place d'un Active Directory sous Windows Server (TP)</td><td class="center e5-period">11–12/2025</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td></tr>
+            <tr><td class="e5-realisation">Mise en place d'un serveur DHCP et DNS sous Linux Debian (TP)</td><td class="center e5-period">01–02/2026</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td></tr>
+            <tr><td class="e5-realisation">Recherche technologique — La telephonie VoIP en entreprise</td><td class="center e5-period">10/2025–06/2026</td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td></tr>
+            <tr><td class="e5-realisation">Portfolio BTS SIO SISR (ce site web)</td><td class="center e5-period">03–05/2026</td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td></tr>
             <tr class="e5-section-row"><td colspan="8">Realisations en milieu professionnel — 1ere annee</td></tr>
-            <tr>
-              <td class="e5-realisation">Remplacement et configuration d'un poste telephonique IP Yealink — client LCL42</td>
-              <td class="center e5-period">18/05/2026</td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-            </tr>
-            <tr>
-              <td class="e5-realisation">Configuration d'un routeur Cisco C888 et switch Netgear — recuperation mot de passe ROMMON</td>
-              <td class="center e5-period">21/05/2026</td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-            </tr>
-            <tr>
-              <td class="e5-realisation">Installation et configuration d'une VM Debian 12 sous Oracle VirtualBox</td>
-              <td class="center e5-period">20/05/2026</td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-              <td class="center"><span class="e5-check checked">✓</span></td>
-            </tr>
+            <tr><td class="e5-realisation">Remplacement et configuration d'un poste telephonique IP Yealink — client LCL42</td><td class="center e5-period">18/05/2026</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td></tr>
+            <tr><td class="e5-realisation">Configuration routeur Cisco C888 + switch Netgear — recuperation mot de passe ROMMON</td><td class="center e5-period">21/05/2026</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td></tr>
+            <tr><td class="e5-realisation">Remplacement routeur 4G LTE-A en panne — client Multitanks International</td><td class="center e5-period">26/05/2026</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td></tr>
+            <tr><td class="e5-realisation">Migration fibre + telephonie IP chez Feurs Piscines (Orange vers 2iT Solutions)</td><td class="center e5-period">01/06/2026</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td></tr>
+            <tr><td class="e5-realisation">Configuration firewall Zyxel USG FLEX 50 : VLANs, NAT, port forwarding</td><td class="center e5-period">03/06/2026</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td></tr>
+            <tr><td class="e5-realisation">Deploiement infrastructure VoIP/DECT Yealink (W70B, T35W, W73H)</td><td class="center e5-period">17/06/2026</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td></tr>
+            <tr><td class="e5-realisation">Configuration firewalls Zyxel USG 100H et USG 20</td><td class="center e5-period">23-24/06/2026</td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td><td class="center"><span class="e5-check checked">✓</span></td></tr>
             <tr class="e5-section-row"><td colspan="8">Realisations en milieu professionnel — 2eme annee</td></tr>
-            <tr style="opacity:0.4">
-              <td class="e5-realisation" style="color:var(--text-muted);font-style:italic">Intitule de la realisation...</td>
-              <td class="center e5-period">JJ/MM/AA</td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-              <td class="center"><span class="e5-check"></span></td>
-            </tr>
+            <tr style="opacity:0.4"><td class="e5-realisation" style="color:var(--text-muted);font-style:italic">Intitule de la realisation...</td><td class="center e5-period">JJ/MM/AA</td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td><td class="center"><span class="e5-check"></span></td></tr>
           </tbody>
         </table>
       </div>
@@ -741,7 +516,7 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
   </section>
 </div>
 
-<!-- ══ STAGE ══ -->
+<!-- STAGE -->
 <div id="page-stage" class="page">
   <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
@@ -763,83 +538,108 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
           <div class="info-row" style="padding:5px 0"><span class="info-label" style="min-width:80px">Mission</span><span class="info-val">Support & infrastructure reseau</span></div>
         </div>
       </div>
+
       <div class="semaines-list reveal">
+        <!-- S1 -->
         <div class="semaine-item open">
           <div class="semaine-header" onclick="toggleSemaine(this)">
-            <div class="semaine-num">
-              <div class="s-badge">S1</div>
-              <div><div class="s-title">Integration & premieres interventions</div><div class="s-dates">18 – 23 mai 2026</div></div>
-            </div>
+            <div class="semaine-num"><div class="s-badge">S1</div><div><div class="s-title">Integration & premieres interventions terrain</div><div class="s-dates">18 – 23 mai 2026</div></div></div>
             <span class="s-arrow">▼</span>
           </div>
           <div class="semaine-body">
-            <strong>Lundi 18/05 — Arrivee & premiere intervention</strong><br>
             <ul>
-              <li>Presentation des locaux, du personnel et installation de mon bureau</li>
-              <li>Mise a jour du portfolio (correction du formulaire de contact)</li>
-              <li>Avancement projets personnels : Cisco CCNA et revisions des trames</li>
-              <li><strong>Intervention client LCL42 :</strong> Diagnostic d'un poste telephonique IP en panne. Apres test de la batterie, le probleme provenait du telephone lui-meme. Remplacement par un nouveau modele Yealink, configuration via l'interface web (affectation sur la ligne 1, l'ancien poste etant incorrectement configure sur la ligne 2), integration au groupe de sonnerie. Test final valide par appel declenchant la sonnerie sur l'ensemble des postes.</li>
+              <li><strong>Intervention client LCL42 :</strong> diagnostic d'un poste telephonique IP en panne. Apres test de la batterie, le probleme venait du telephone lui-meme. Remplacement par un nouveau Yealink, configuration via l'interface web (correction de la ligne SIP : l'ancien etait mal configure sur la ligne 2), integration au groupe de sonnerie. Test valide par appel sur l'ensemble des postes.</li>
+              <li><strong>Configuration equipements reseau reels :</strong> connexion au routeur Cisco C888 via PuTTY en liaison serie (COM3, 9600 bauds). Mot de passe enable inconnu — recuperation via mode ROMMON (interruption au demarrage, confreg 0x2142 pour bypasser la config existante). Configuration de base post-reset : hostname, mots de passe, IP 192.168.1.1/24 sur Vlan1, routage IP active. Connectivite verifiee par ping vers le switch Netgear ProSAFE M4100-D10-POE (0% de perte).</li>
+              <li><strong>Installation d'une VM Debian 12</strong> sous Oracle VirtualBox.</li>
+              <li><strong>Decouverte de l'infrastructure 2iT Solutions :</strong> 3 connexions fibre distinctes pour la redondance, datacenters et routeurs en haute disponibilite. Presentation des equipements de telephonie IP Yealink et Alcatel.</li>
             </ul>
-            <br>
-            <strong>Mardi 19/05 — Cisco Packet Tracer</strong><br>
+            <div class="task-tags"><span class="stag">Yealink</span><span class="stag">Cisco C888</span><span class="stag">PuTTY</span><span class="stag">ROMMON</span><span class="stag">Netgear</span><span class="stag">Debian 12</span><span class="stag">VoIP</span></div>
+          </div>
+        </div>
+
+        <!-- S2 -->
+        <div class="semaine-item">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num"><div class="s-badge">S2</div><div><div class="s-title">Interventions clients & configuration routeurs</div><div class="s-dates">26 – 30 mai 2026</div></div></div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">
             <ul>
-              <li>Creation de plusieurs reseaux avec Cisco Packet Tracer : routeurs, switches, PC, DHCP, VLANs</li>
-              <li>Continuation de la formation Cisco CCNA</li>
+              <li><strong>Intervention Multitanks International (Montbrison) :</strong> remplacement d'un routeur 4G LTE-A en panne (surchauffe). Diagnostic confirme avec un equipement de remplacement. Configuration du nouveau routeur avec les memes parametres reseau (IP, masque, passerelle) et le meme SSID/mot de passe Wi-Fi pour que tous les appareils reconnectent automatiquement sans intervention supplementaire.</li>
+              <li><strong>Configuration routeur Zyxel LTE3301-PLUS :</strong> configuration WAN en IP statique (menu Network > Broadband), LAN avec serveur DHCP et plage d'adresses, creation d'une regle NAT de port forwarding. Resolution d'un conflit carte Ethernet / Wi-Fi sous Windows (passage de la carte en DHCP automatique).</li>
+              <li><strong>Intervention Profil Espace (Saint-Etienne) :</strong> telephone IP Yealink sans adresse IP. Diagnostic : cable Ethernet Cat 5 endommage (rupture de fils en cuivre confirmee par test sur PC). Remplacement par un cable Cat 5e, test de connectivite OK, adresse IP distribuee, appel test reussi.</li>
             </ul>
-            <br>
-            <strong>Mercredi 20/05 — Linux & reseaux</strong><br>
+            <div class="task-tags"><span class="stag">Routeur 4G LTE-A</span><span class="stag">Zyxel LTE3301</span><span class="stag">NAT</span><span class="stag">DHCP</span><span class="stag">Cat5e</span><span class="stag">Yealink</span></div>
+          </div>
+        </div>
+
+        <!-- S3 -->
+        <div class="semaine-item">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num"><div class="s-badge">S3</div><div><div class="s-title">Migration operateur, GLPI & firewall Zyxel</div><div class="s-dates">2 – 6 juin 2026</div></div></div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">
             <ul>
-              <li>Implementation d'un reseau d'entreprise sur Cisco Packet Tracer</li>
-              <li>Installation d'une Debian 12 (VM) via Oracle VirtualBox</li>
+              <li><strong>Migration Feurs Piscines :</strong> migration complete depuis Orange vers 2iT Solutions. Installation et interconnexion de : box fibre Orange, routeur Netgear, box Zyxel, boitier de supervision Koesio (monitoring a distance). Recuperation de l'ancien SSID et mot de passe Wi-Fi pour reconnexion transparente de tous les appareils. Mise en service des nouveaux telephones IP.</li>
+              <li><strong>Installation et configuration GLPI sur Debian :</strong> verification des services Apache et MariaDB, acces a l'interface web, creation de comptes utilisateurs (administrateur, technicien, utilisateur standard), gestion de tickets d'assistance, ajout d'equipements a l'inventaire du parc.</li>
+              <li><strong>Configuration firewall Zyxel USG FLEX 50 :</strong> creation de 3 VLANs (VLAN 1 PC avec DHCP, VLAN 72 Telephonie avec DHCP, VLAN 100 Serveurs sans DHCP). Regles NAT pour RDP et HTTPS. Diagnostic du switch Netgear GS310TP bloque en mode Cloud Netgear Insight — identification par table DHCP du firewall et acces debloque via l'outil constructeur.</li>
             </ul>
-            <br>
-            <strong>Jeudi 21/05 — Configuration equipements reels</strong><br>
+            <div class="task-tags"><span class="stag">Fibre</span><span class="stag">Koesio</span><span class="stag">GLPI</span><span class="stag">Zyxel USG FLEX 50</span><span class="stag">VLAN</span><span class="stag">NAT</span><span class="stag">Netgear GS310TP</span></div>
+          </div>
+        </div>
+
+        <!-- S4 -->
+        <div class="semaine-item">
+          <div class="semaine-header" onclick="toggleSemaine(this)">
+            <div class="semaine-num"><div class="s-badge">S4</div><div><div class="s-title">Interventions reseau & telephonie client</div><div class="s-dates">9 – 13 juin 2026</div></div></div>
+            <span class="s-arrow">▼</span>
+          </div>
+          <div class="semaine-body">
             <ul>
-              <li>Resolution d'un probleme de driver pour cable console USB (adaptateur Prolific PL2303 incompatible Windows 11) — identification dans le gestionnaire de peripheriques et installation manuelle du driver compatible</li>
-              <li>Connexion au routeur Cisco C888 via PuTTY en liaison serie (COM3, 9600 bauds)</li>
-              <li>Recuperation du mot de passe enable inconnu via mode ROMMON : interruption au demarrage, modification du registre de configuration (confreg 0x2142) pour demarrer sans charger la configuration existante</li>
-              <li>Configuration de base du routeur apres reinitialisation : hostname, mots de passe securises, adresse IP 192.168.1.1/24 sur l'interface Vlan1, activation du routage IP</li>
-              <li>Connexion du routeur au switch Netgear ProSAFE M4100-D10-POE via cable RJ45, configuration IP statique sur le poste de travail (192.168.1.2/24), verification de la connectivite par ping avec 0% de perte de paquets</li>
-              <li>Presentation par le tuteur de l'infrastructure reseau : 3 connexions fibre distinctes pour assurer la continuite de service, plusieurs datacenters et routeurs redondants en haute disponibilite</li>
-              <li>Decouverte des equipements de telephonie IP professionnelle : Yealink et Alcatel</li>
+              <li><strong>TP DHCP sous Debian 12 :</strong> deux VMs en Internal Network VirtualBox (serveur + client). Installation isc-dhcp-server, configuration dhcpd.conf (plage 192.168.1.100–200, passerelle, DNS). Reservation d'adresse par MAC pour IP fixe. Verification du processus DORA.</li>
+              <li><strong>TP Active Directory Windows Server 2019 :</strong> installation AD DS, promotion en controleur de domaine (infotech.local). Creation de 3 OUs (Direction, Comptabilite, Informatique), utilisateurs et groupes. GPO Restriction_Bureau sur Comptabilite : desactivation Panneau de configuration, fond d'ecran impose. Validation avec gpupdate /force.</li>
+              <li><strong>Intervention reseau client :</strong> 3 zones perdaient la connexion regulierement. Cause : switchs 8 ports defectueux. Remplacement par des modeles 5 ports — connectivite retablie. Panne d'interphonie egalement resolue : remplacement d'un cable Ethernet endommage dans la baie et redemarrage du boitier portail/interphone.</li>
+              <li><strong>Configuration de 16 telephones Yealink SIP-T85W.</strong></li>
             </ul>
+            <div class="task-tags"><span class="stag">DHCP Debian</span><span class="stag">Active Directory</span><span class="stag">GPO</span><span class="stag">Switch 5p</span><span class="stag">Interphonie</span><span class="stag">Yealink T85W</span></div>
           </div>
         </div>
+
+        <!-- S5 -->
         <div class="semaine-item">
           <div class="semaine-header" onclick="toggleSemaine(this)">
-            <div class="semaine-num"><div class="s-badge">S2</div><div><div class="s-title">Semaine 2</div><div class="s-dates">26 – 30 mai 2026</div></div></div>
+            <div class="semaine-num"><div class="s-badge">S5</div><div><div class="s-title">Securite reseau & deploiement VoIP/DECT</div><div class="s-dates">16 – 20 juin 2026</div></div></div>
             <span class="s-arrow">▼</span>
           </div>
-          <div class="semaine-body">A completer...</div>
+          <div class="semaine-body">
+            <ul>
+              <li><strong>TP securite reseau (Ubuntu) :</strong> configuration UFW — blocage trafic entrant par defaut, autorisation SSH/HTTP/HTTPS, blocage Telnet (port 23). Analyse de trafic avec Wireshark : capture ICMP lors d'un ping vers 8.8.8.8, comparaison SSH (trafic chiffre) vs HTTP (en-tetes visibles en clair).</li>
+              <li><strong>TP Cisco Packet Tracer multi-sites :</strong> topologie entreprise complete avec VLANs par departement, routage inter-VLAN sur switch multicouche, OSPF entre sites, ACL de filtrage, securisation SSH et Port Security sur les switches.</li>
+              <li><strong>TP Linux + Windows Server :</strong> serveur Debian 12 avec DNS (direct + inverse), Apache (2 sites dont un HTTPS avec certificat auto-signe), FTP. Windows Server 2019 en controleur de domaine, 9 utilisateurs, GPO de restriction. Client Windows 10 joint au domaine avec verification des droits.</li>
+              <li><strong>Deploiement VoIP/DECT Yealink :</strong> base W70B et telephone T35W — configuration via interfaces web (URL serveur d'approvisionnement, desactivation verification TLS). Appairage du combine W73H (PIN DECT obtenu du tuteur), mise a jour firmware automatique via la base. Test d'appel W73H vers T35W reussi.</li>
+            </ul>
+            <div class="task-tags"><span class="stag">UFW</span><span class="stag">Wireshark</span><span class="stag">OSPF</span><span class="stag">ACL</span><span class="stag">Apache HTTPS</span><span class="stag">W70B</span><span class="stag">T35W</span><span class="stag">DECT W73H</span></div>
+          </div>
         </div>
+
+        <!-- S6 -->
         <div class="semaine-item">
           <div class="semaine-header" onclick="toggleSemaine(this)">
-            <div class="semaine-num"><div class="s-badge">S3</div><div><div class="s-title">Semaine 3</div><div class="s-dates">2 – 6 juin 2026</div></div></div>
+            <div class="semaine-num"><div class="s-badge">S6</div><div><div class="s-title">DECT avance & configuration Zyxel USG</div><div class="s-dates">23 – 27 juin 2026</div></div></div>
             <span class="s-arrow">▼</span>
           </div>
-          <div class="semaine-body">A completer...</div>
-        </div>
-        <div class="semaine-item">
-          <div class="semaine-header" onclick="toggleSemaine(this)">
-            <div class="semaine-num"><div class="s-badge">S4</div><div><div class="s-title">Semaine 4</div><div class="s-dates">9 – 13 juin 2026</div></div></div>
-            <span class="s-arrow">▼</span>
+          <div class="semaine-body">
+            <ul>
+              <li><strong>Configuration equipements DECT :</strong> 3 DECT IP Phone W59R Pro, 1 DECT Multi-Cell Package W75 Mini MC, 1 SIP Ultra Prime Business Phone T85W.</li>
+              <li><strong>Configuration firewall Zyxel USG 100H :</strong> configuration complete — interfaces, VLANs, regles de filtrage, NAT.</li>
+              <li><strong>Configuration firewall Zyxel USG 20 :</strong> second modele configure pour un deploiement client distinct.</li>
+            </ul>
+            <div class="task-tags"><span class="stag">W59R Pro</span><span class="stag">W75 Mini MC</span><span class="stag">T85W</span><span class="stag">Zyxel USG 100H</span><span class="stag">Zyxel USG 20</span><span class="stag">Firewall</span></div>
           </div>
-          <div class="semaine-body">A completer...</div>
         </div>
-        <div class="semaine-item">
-          <div class="semaine-header" onclick="toggleSemaine(this)">
-            <div class="semaine-num"><div class="s-badge">S5</div><div><div class="s-title">Semaine 5</div><div class="s-dates">16 – 20 juin 2026</div></div></div>
-            <span class="s-arrow">▼</span>
-          </div>
-          <div class="semaine-body">A completer...</div>
-        </div>
-        <div class="semaine-item">
-          <div class="semaine-header" onclick="toggleSemaine(this)">
-            <div class="semaine-num"><div class="s-badge">S6</div><div><div class="s-title">Semaine 6</div><div class="s-dates">23 – 27 juin 2026</div></div></div>
-            <span class="s-arrow">▼</span>
-          </div>
-          <div class="semaine-body">A completer...</div>
-        </div>
+
+        <!-- S7 -->
         <div class="semaine-item">
           <div class="semaine-header" onclick="toggleSemaine(this)">
             <div class="semaine-num"><div class="s-badge">S7</div><div><div class="s-title">Bilan & restitution</div><div class="s-dates">30 juin – 3 juillet 2026</div></div></div>
@@ -852,7 +652,7 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
   </section>
 </div>
 
-<!-- ══ CONTACT ══ -->
+<!-- CONTACT -->
 <div id="page-contact" class="page">
   <section style="min-height:100vh;display:flex;align-items:center;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
@@ -863,22 +663,10 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
       </div>
       <div class="contact-grid">
         <div class="contact-info reveal">
-          <a href="mailto:hossam.abouhali@gmail.com" class="contact-item">
-            <div class="contact-icon">@</div>
-            <div><div class="contact-label">Email</div><div class="contact-val">hossam.abouhali@gmail.com</div></div>
-          </a>
-          <a href="tel:+33765227665" class="contact-item">
-            <div class="contact-icon">T</div>
-            <div><div class="contact-label">Telephone</div><div class="contact-val">+33 07 65 22 76 65</div></div>
-          </a>
-          <div class="contact-item">
-            <div class="contact-icon">L</div>
-            <div><div class="contact-label">Localisation</div><div class="contact-val">Saint-Chamond, Loire (42)</div></div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">S</div>
-            <div><div class="contact-label">Stage actuel</div><div class="contact-val">2IT Solutions · Saint-Etienne</div></div>
-          </div>
+          <a href="mailto:hossam.abouhali@gmail.com" class="contact-item"><div class="contact-icon">@</div><div><div class="contact-label">Email</div><div class="contact-val">hossam.abouhali@gmail.com</div></div></a>
+          <a href="tel:+33765227665" class="contact-item"><div class="contact-icon">T</div><div><div class="contact-label">Telephone</div><div class="contact-val">+33 07 65 22 76 65</div></div></a>
+          <div class="contact-item"><div class="contact-icon">L</div><div><div class="contact-label">Localisation</div><div class="contact-val">Saint-Chamond, Loire (42)</div></div></div>
+          <div class="contact-item"><div class="contact-icon">S</div><div><div class="contact-label">Stage actuel</div><div class="contact-val">2IT Solutions · Saint-Etienne</div></div></div>
         </div>
         <div class="contact-form reveal reveal-delay-1">
           <div class="form-title">Envoyer un message</div>
@@ -897,40 +685,22 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
   </section>
 </div>
 
-<!-- MODALS -->
+<!-- MODALS FORMATION -->
 <div class="modal-overlay" id="modal-bts" onclick="closeModalOutside(event,'modal-bts')">
   <div class="modal-box">
-    <div class="modal-header">
-      <div><div class="modal-title">BTS SIO — Option SISR</div><div class="modal-subtitle">Lycee Georges Brassens · Rive-de-Gier · 2025–2027</div></div>
-      <button class="modal-close" onclick="closeModal('modal-bts')">x</button>
-    </div>
+    <div class="modal-header"><div><div class="modal-title">BTS SIO — Option SISR</div><div class="modal-subtitle">Lycee Georges Brassens · Rive-de-Gier · 2025–2027</div></div><button class="modal-close" onclick="closeModal('modal-bts')">x</button></div>
     <p style="font-size:13.5px;color:var(--text-muted);line-height:1.8;margin-bottom:1rem">Formation en <strong style="color:var(--text-dark)">Solutions d'Infrastructure, Systemes et Reseaux</strong> sur 2 ans.</p>
-    <ul style="padding-left:1.2rem;font-size:13px;color:var(--text-muted);line-height:1.8">
-      <li>Administration Windows Server (AD, GPO, DNS, DHCP)</li>
-      <li>Administration Linux Debian (services, scripts, pare-feu)</li>
-      <li>Reseaux : TCP/IP, routage, VLAN, Cisco Packet Tracer</li>
-      <li>Virtualisation VMware / VirtualBox</li>
-      <li>Gestion de parc avec GLPI</li>
-      <li>Cybersecurite et regles de securite reseau</li>
-    </ul>
+    <ul style="padding-left:1.2rem;font-size:13px;color:var(--text-muted);line-height:1.8"><li>Administration Windows Server (AD, GPO, DNS, DHCP)</li><li>Administration Linux Debian (services, scripts, pare-feu)</li><li>Reseaux : TCP/IP, routage, VLAN, Cisco Packet Tracer</li><li>Virtualisation VMware / VirtualBox</li><li>Gestion de parc avec GLPI</li><li>Cybersecurite et regles de securite reseau</li></ul>
   </div>
 </div>
-
 <div class="modal-overlay" id="modal-bac" onclick="closeModalOutside(event,'modal-bac')">
   <div class="modal-box">
-    <div class="modal-header">
-      <div><div class="modal-title">Bac STI2D — Option SIN</div><div class="modal-subtitle">Cite scolaire Claude Lebois · Saint-Chamond · 2023–2025</div></div>
-      <button class="modal-close" onclick="closeModal('modal-bac')">x</button>
-    </div>
-    <ul style="padding-left:1.2rem;font-size:13px;color:var(--text-muted);line-height:1.8">
-      <li>Bases en electronique et systemes embarques</li>
-      <li>Programmation (Python, C, Arduino)</li>
-      <li>Reseaux numeriques et protocoles de communication</li>
-      <li>Projets technologiques pluridisciplinaires</li>
-    </ul>
+    <div class="modal-header"><div><div class="modal-title">Bac STI2D — Option SIN</div><div class="modal-subtitle">Cite scolaire Claude Lebois · Saint-Chamond · 2023–2025</div></div><button class="modal-close" onclick="closeModal('modal-bac')">x</button></div>
+    <ul style="padding-left:1.2rem;font-size:13px;color:var(--text-muted);line-height:1.8"><li>Bases en electronique et systemes embarques</li><li>Programmation (Python, C, Arduino)</li><li>Reseaux numeriques et protocoles de communication</li><li>Projets technologiques pluridisciplinaires</li></ul>
   </div>
 </div>
 
+<!-- CV -->
 <div id="page-cv" class="page">
   <section style="min-height:100vh;display:flex;align-items:flex-start;padding-top:7rem;padding-bottom:4rem">
     <div class="wrapper" style="width:100%">
@@ -939,132 +709,56 @@ body.dark .form-group input, body.dark .form-group textarea { background: rgba(2
         <h2 class="section-title">Curriculum Vitae</h2>
         <p class="section-sub">Hossam ABOUHALI — BTS SIO option SISR</p>
       </div>
-      <!-- CV CARD -->
       <div class="glass-card reveal" style="max-width:780px;margin:0 auto">
-        <!-- HEADER CV -->
         <div style="background:var(--blue);color:white;border-radius:12px;padding:2rem;margin-bottom:1.5rem">
           <div style="font-size:28px;font-weight:800;letter-spacing:-0.02em;margin-bottom:0.2rem">Hossam ABOUHALI</div>
           <div style="font-size:13px;opacity:0.85;font-style:italic;margin-bottom:1rem">En formation BTS SIO option SISR — Stage du 18 mai au 3 juillet 2026</div>
-          <div style="display:flex;flex-wrap:wrap;gap:1rem;font-size:12px;opacity:0.9">
-            <span>+33 07 65 22 76 65</span>
-            <span>hossam.abouhali@gmail.com</span>
-            <span>Saint-Chamond, France</span>
-            <span>Ne le 12/07/2007</span>
-            <span>Permis B</span>
-          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:1rem;font-size:12px;opacity:0.9"><span>+33 07 65 22 76 65</span><span>hossam.abouhali@gmail.com</span><span>Saint-Chamond, France</span><span>Ne le 12/07/2007</span><span>Permis B</span></div>
         </div>
-
-        <!-- A PROPOS -->
         <div style="margin-bottom:1.5rem">
           <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">A propos</div>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.7">Etudiant en premiere annee de BTS Services Informatiques aux Organisations (option SISR), motive et rigoureux, je souhaite developper mes competences en support, systemes et reseaux au sein d'une entreprise dynamique.</p>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.7">Etudiant en premiere annee de BTS SIO (option SISR), motive et rigoureux, je souhaite developper mes competences en support, systemes et reseaux au sein d'une entreprise dynamique.</p>
         </div>
-
-        <!-- COMPETENCES -->
         <div style="margin-bottom:1.5rem">
           <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Competences</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12.5px;color:var(--text-muted)">
-            <div>· Installation et configuration de postes (Windows 10/11)</div>
-            <div>· Configuration reseau : TCP/IP, DHCP, DNS, VLANs</div>
-            <div>· Administration Active Directory</div>
-            <div>· Virtualisation : VMware, VirtualBox</div>
-            <div>· Linux Debian (services, pare-feu, scripts)</div>
-            <div>· Gestion de parc avec GLPI</div>
-            <div>· Cisco Packet Tracer</div>
-            <div>· Microsoft 365 / Pack Office</div>
-            <div>· Support utilisateur de premier niveau</div>
-            <div>· Maintenance materielle et logicielle</div>
-          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12.5px;color:var(--text-muted)"><div>· Installation et configuration de postes (Windows 10/11)</div><div>· Configuration reseau : TCP/IP, DHCP, DNS, VLANs</div><div>· Administration Active Directory / GPO</div><div>· Virtualisation : VMware, VirtualBox</div><div>· Linux Debian (services, pare-feu, scripts)</div><div>· Gestion de parc avec GLPI</div><div>· Telephonie IP VoIP / DECT Yealink</div><div>· Firewalls Zyxel USG / Cisco</div><div>· Support utilisateur de premier niveau</div><div>· Maintenance materielle et logicielle</div></div>
         </div>
-
-        <!-- EXPERIENCE -->
         <div style="margin-bottom:1.5rem">
           <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Experiences professionnelles</div>
           <div style="margin-bottom:1rem">
-            <div style="display:flex;justify-content:space-between;margin-bottom:3px">
-              <span style="font-size:14px;font-weight:700;color:var(--text-dark)">Stage BTS SIO SISR — 2IT Solutions</span>
-              <span style="font-size:11px;color:var(--text-muted);font-style:italic">18 mai – 3 juillet 2026</span>
-            </div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:14px;font-weight:700;color:var(--text-dark)">Stage BTS SIO SISR — 2IT Solutions</span><span style="font-size:11px;color:var(--text-muted);font-style:italic">18 mai – 3 juillet 2026</span></div>
             <div style="font-size:12px;color:var(--blue);margin-bottom:5px">Saint-Etienne, Loire</div>
-            <ul style="font-size:12.5px;color:var(--text-muted);padding-left:1.2rem;line-height:1.7">
-              <li>Intervention et remplacement d'un poste telephonique IP Yealink chez un client</li>
-              <li>Configuration d'un routeur Cisco C888 et switch Netgear (recuperation mot de passe ROMMON)</li>
-              <li>Installation d'une VM Debian 12 sous Oracle VirtualBox</li>
-              <li>Decouverte de l'infrastructure reseau : fibre redondante, datacenters, haute disponibilite</li>
-            </ul>
+            <ul style="font-size:12.5px;color:var(--text-muted);padding-left:1.2rem;line-height:1.7"><li>Interventions terrain chez des clients (telephonie IP, cablage, routeurs 4G)</li><li>Configuration firewalls Zyxel USG (VLANs, NAT, port forwarding)</li><li>Migration operateur et mise en service telephonie IP</li><li>Deploiement d'infrastructures VoIP/DECT Yealink</li><li>TP systemes : DHCP, Active Directory, securite UFW/Wireshark, OSPF</li></ul>
           </div>
           <div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:3px">
-              <span style="font-size:14px;font-weight:700;color:var(--text-dark)">Stage d'observation — Atalian</span>
-              <span style="font-size:11px;color:var(--text-muted);font-style:italic">Janvier 2022</span>
-            </div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="font-size:14px;font-weight:700;color:var(--text-dark)">Stage d'observation — Atalian</span><span style="font-size:11px;color:var(--text-muted);font-style:italic">Janvier 2022</span></div>
             <div style="font-size:12px;color:var(--blue);margin-bottom:5px">Saint-Etienne</div>
-            <ul style="font-size:12.5px;color:var(--text-muted);padding-left:1.2rem;line-height:1.7">
-              <li>Decouverte du milieu professionnel industriel</li>
-              <li>Sensibilisation aux regles de securite en environnement industriel</li>
-            </ul>
+            <ul style="font-size:12.5px;color:var(--text-muted);padding-left:1.2rem;line-height:1.7"><li>Decouverte du milieu professionnel industriel</li></ul>
           </div>
         </div>
-
-        <!-- PROJETS -->
-        <div style="margin-bottom:1.5rem">
-          <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Projets scolaires</div>
-          <ul style="font-size:12.5px;color:var(--text-muted);padding-left:1.2rem;line-height:1.8">
-            <li>Virtualisation de machines avec VMware</li>
-            <li>Mise en place et gestion d'un outil de ticketing avec GLPI</li>
-            <li>Configuration reseau et simulations avec Cisco Packet Tracer</li>
-            <li>Gestion d'utilisateurs et strategies sous Windows Server / Active Directory</li>
-          </ul>
-        </div>
-
-        <!-- FORMATION -->
         <div style="margin-bottom:1.5rem">
           <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Formation</div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:8px">
-            <div>
-              <div style="font-size:14px;font-weight:700;color:var(--text-dark)">BTS SIO — Option SISR</div>
-              <div style="font-size:12px;color:var(--text-muted)">Lycee Georges Brassens · Rive-de-Gier</div>
-            </div>
-            <span style="font-size:11px;color:var(--text-muted);font-style:italic">2025 – 2027</span>
-          </div>
-          <div style="display:flex;justify-content:space-between">
-            <div>
-              <div style="font-size:14px;font-weight:700;color:var(--text-dark)">Baccalaureat STI2D — Option SIN</div>
-              <div style="font-size:12px;color:var(--text-muted)">Cite scolaire Claude Lebois · Saint-Chamond</div>
-            </div>
-            <span style="font-size:11px;color:var(--text-muted);font-style:italic">2023 – 2025</span>
-          </div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px"><div><div style="font-size:14px;font-weight:700;color:var(--text-dark)">BTS SIO — Option SISR</div><div style="font-size:12px;color:var(--text-muted)">Lycee Georges Brassens · Rive-de-Gier</div></div><span style="font-size:11px;color:var(--text-muted);font-style:italic">2025 – 2027</span></div>
+          <div style="display:flex;justify-content:space-between"><div><div style="font-size:14px;font-weight:700;color:var(--text-dark)">Baccalaureat STI2D — Option SIN</div><div style="font-size:12px;color:var(--text-muted)">Cite scolaire Claude Lebois · Saint-Chamond</div></div><span style="font-size:11px;color:var(--text-muted);font-style:italic">2023 – 2025</span></div>
         </div>
-
-        <!-- LANGUES & CERTS -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
           <div>
             <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Langues</div>
-            <div style="font-size:12.5px;color:var(--text-muted);line-height:1.8">
-              <div>Francais : langue maternelle</div>
-              <div>Anglais : B2</div>
-              <div>Espagnol : B1</div>
-            </div>
+            <div style="font-size:12.5px;color:var(--text-muted);line-height:1.8"><div>Francais : langue maternelle</div><div>Anglais : B2</div><div>Espagnol : B1</div></div>
           </div>
           <div>
             <div style="font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:0.8rem">Certifications</div>
-            <div style="font-size:12.5px;color:var(--text-muted);line-height:1.8">
-              <div>Certification PIX (366/895 — Independant 1)</div>
-              <div>Certifications CNIL — RGPD (6 modules)</div>
-              <div>SecNumademie — ANSSI (4 modules)</div>
-              <div>Root-Me (4610 pts · 43 challenges)</div>
-              <div>Permis B</div>
-            </div>
+            <div style="font-size:12.5px;color:var(--text-muted);line-height:1.8"><div>Certification PIX (366/895 — Independant 1)</div><div>Certifications CNIL — RGPD (6 modules)</div><div>SecNumademie — ANSSI (4 modules)</div><div>Root-Me (4610 pts · 43 challenges)</div><div>Permis B</div></div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 </div>
 
-
 <footer style="position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid rgba(37,99,235,0.1);font-size:12px;color:var(--text-muted)">
+  © 2026 · Hossam Abouhali · BTS SIO SISR · Lycee Georges Brassens, Rive-de-Gier
+</footer>
 
 <script>
 function showPage(id, linkEl) {
@@ -1106,8 +800,5 @@ async function handleSubmit(e) {
   } catch { document.getElementById('form-error').style.display='block'; btn.textContent='Envoyer le message'; btn.disabled=false; }
 }
 </script>
-<footer style="position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid rgba(37,99,235,0.1);font-size:12px;color:var(--text-muted)">
-  © 2026 · Hossam Abouhali · BTS SIO SISR · Lycee Georges Brassens, Rive-de-Gier
-</footer>
 </body>
 </html>
